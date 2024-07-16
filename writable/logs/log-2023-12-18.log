@@ -1,0 +1,12 @@
+CRITICAL - 2023-12-18 07:07:33 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\gudangku\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\gudangku\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2023-12-18 07:07:33 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\gudangku\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\gudangku\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}

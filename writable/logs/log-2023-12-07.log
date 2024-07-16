@@ -1,0 +1,28 @@
+CRITICAL - 2023-12-07 20:55:40 --> Undefined index: platNomor
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-07 20:56:07 --> Undefined index: platNomor
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-07 20:56:18 --> Undefined index: platNomor
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-07 20:56:22 --> Undefined index: platNomor
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 52, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

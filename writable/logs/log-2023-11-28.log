@@ -1,0 +1,294 @@
+CRITICAL - 2023-11-28 07:48:36 --> The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\bengkelin\system\CodeIgniter.php(219): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\bengkelin\system\CodeIgniter.php(177): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\bengkelin\system\bootstrap.php(146): CodeIgniter\CodeIgniter->initialize()
+#3 C:\xampp\htdocs\bengkelin\index.php(28): require('C:\\xampp\\htdocs...')
+#4 {main}
+CRITICAL - 2023-11-28 01:23:23 --> Class 'App\Models\AntrianModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:23:57 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:23:59 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:19 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:20 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:20 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:21 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:21 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:21 --> Class 'App\Controllers\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:24:56 --> Class 'App\Models\BarangMasukModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 01:27:00 --> Invalid file: antrian.php
+#0 C:\xampp\htdocs\gudangku\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('antrian.php')
+#1 C:\xampp\htdocs\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('antrian', Array, true)
+#2 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(20): view('antrian')
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-11-28 21:33:19 --> Invalid file: antrian.php
+#0 C:\xampp\htdocs\gudangku\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('antrian.php')
+#1 C:\xampp\htdocs\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('antrian', Array, true)
+#2 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(20): view('antrian')
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-11-28 23:34:45 --> Undefined variable: barang
+#0 C:\xampp\htdocs\gudangku\app\Views\barangMasuk.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\gudangku\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('barangMasuk', Array, true)
+#4 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): view('barangMasuk', Array)
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#6 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#7 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-28 23:35:13 --> Undefined variable: barang
+#0 C:\xampp\htdocs\gudangku\app\Views\barangMasuk.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\gudangku\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('barangMasuk', Array, true)
+#4 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): view('barangMasuk', Array)
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#6 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#7 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-11-28 23:36:05 --> Undefined property: App\Controllers\BarangMasuk::$load
+#0 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-28 23:57:42 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:44 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:44 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:45 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:45 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:45 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:45 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:45 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:46 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:47 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:47 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:47 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:47 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:48 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:49 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:49 --> Cannot call constructor
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\BarangMasuk->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-11-28 23:57:58 --> Undefined property: App\Controllers\BarangMasuk::$load
+#0 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-28 23:58:07 --> Undefined property: App\Controllers\BarangMasuk::$load
+#0 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-28 23:59:48 --> Undefined variable: barang
+#0 C:\xampp\htdocs\gudangku\app\Views\barangMasuk.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\gudangku\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('barangMasuk', Array, true)
+#4 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(21): view('barangMasuk', Array)
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->index()
+#6 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#7 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

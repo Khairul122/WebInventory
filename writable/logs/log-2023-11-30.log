@@ -1,0 +1,392 @@
+CRITICAL - 2023-11-30 00:19:17 --> There is no data to insert.
+#0 C:\xampp\htdocs\gudangku\system\BaseModel.php(718): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+#1 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#2 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#3 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(43): CodeIgniter\BaseModel->save(Array)
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#6 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2023-11-30 00:34:58 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 00:34:58 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 00:36:09 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 00:36:09 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 00:36:33 --> Column 'idBarang' cannot be null
+CRITICAL - 2023-11-30 00:36:33 --> Column 'idBarang' cannot be null
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 00:37:52 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 00:37:52 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 00:37:59 --> Undefined variable: totalTime
+#0 C:\xampp\htdocs\gudangku\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(497): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\xampp\htdocs\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\xampp\htdocs\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-11-30 00:38:04 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 00:38:04 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 20:57:30 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 20:57:30 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 20:58:01 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 20:58:01 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 20:59:47 --> Undefined variable: totalTime
+#0 C:\xampp\htdocs\gudangku\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(497): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\xampp\htdocs\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\xampp\htdocs\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2023-11-30 20:59:53 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 20:59:53 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:01:17 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:01:17 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:01:18 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:01:18 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:01:19 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:05 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:05 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:07 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:07 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:30 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:30 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:32 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2023-11-30 21:02:35 --> Duplicate entry '0' for key 'PRIMARY'
+CRITICAL - 2023-11-30 21:02:35 --> Duplicate entry '0' for key 'PRIMARY'
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(44): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-11-30 21:06:12 --> syntax error, unexpected ')', expecting ']'
+#0 C:\xampp\htdocs\gudangku\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('barangMasuk/tam...')
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('barangMasuk/tam...')
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-30 21:06:15 --> syntax error, unexpected ')', expecting ']'
+#0 C:\xampp\htdocs\gudangku\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('barangmasuk')
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('barangmasuk')
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-30 21:06:40 --> Undefined variable: BarangModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-11-30 21:18:36 --> Undefined variable: BarangModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\BarangMasuk.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\BarangMasuk->tambah()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}

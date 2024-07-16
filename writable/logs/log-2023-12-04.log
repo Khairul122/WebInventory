@@ -1,0 +1,16 @@
+ERROR - 2023-12-04 23:33:34 --> Column 'namaBarang' cannot be null
+CRITICAL - 2023-12-04 23:33:34 --> Column 'namaBarang' cannot be null
+#0 C:\xampp\htdocs\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\gudangku\app\Controllers\Barang.php(34): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}

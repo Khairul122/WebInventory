@@ -1,0 +1,126 @@
+CRITICAL - 2023-12-10 21:55:50 --> Array and string offset access syntax with curly braces is deprecated
+#0 C:\xampp\htdocs\gudangku\system\Router\Router.php(519): CodeIgniter\Debug\Exceptions->errorHandler(8192, 'Array and strin...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\gudangku\system\Router\Router.php(519): include_once()
+#2 C:\xampp\htdocs\gudangku\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('laporan')
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('laporan')
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-12-10 21:56:27 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:57:03 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:57:26 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:57:39 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:58:25 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:58:46 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:58:58 --> Undefined property: App\Controllers\Laporan::$barangKeluarModel
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 21:59:50 --> Class 'App\Controllers\BarangKeluarModel' not found
+#0 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(801): App\Controllers\Laporan->__construct()
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(401): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-12-10 22:00:11 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(60): count(true)
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-12-10 22:02:14 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(60): count(true)
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-12-10 22:02:25 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(60): count(true)
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-12-10 22:04:04 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 60, Array)
+#1 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(60): count(true)
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#4 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-12-10 22:05:05 --> syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\gudangku\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('laporan')
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('laporan')
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 22:17:15 --> Undefined variable: totalTime
+#0 C:\xampp\htdocs\gudangku\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(497): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\gudangku\system\Debug\Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\xampp\htdocs\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\xampp\htdocs\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-12-10 22:27:05 --> Undefined index: penguranganStok
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-12-10 22:27:43 --> Undefined index: penguranganStok
+#0 C:\xampp\htdocs\gudangku\app\Controllers\Laporan.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 57, Array)
+#1 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarangMasuk()
+#2 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#3 C:\xampp\htdocs\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
