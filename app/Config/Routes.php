@@ -37,6 +37,8 @@ $routes->get('/antrian/(:any)', 'Antrian::index');
 $routes->get('/laporan/(:any)', 'Laporan::index');
 $routes->get('/jasa/(:any)', 'Jasa::index');
 $routes->get('/user/(:any)', 'User::index');
+$routes->post('/mesin/edit', 'Mesin::edit');
+
 
 /*
  * --------------------------------------------------------------------

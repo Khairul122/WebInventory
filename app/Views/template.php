@@ -59,6 +59,7 @@
                         <div class="menu_section">
                             <ul class="nav side-menu">
                                 <li><a href="<?php echo base_url(); ?>/barang"><i class="fa fa-sign-in"></i>Data Barang</a>
+                                <li><a href="<?php echo base_url(); ?>/mesin"><i class="fa fa-sign-in"></i>Data Mesin</a>
                                 </li>
                                 <li><a href="<?php echo base_url(); ?>/dataPemesanan"><i class="fa fa-sign-out"></i>Data Pemesanan</a>
                                 </li>
