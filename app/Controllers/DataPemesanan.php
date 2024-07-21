@@ -30,6 +30,7 @@ class DataPemesanan extends BaseController
     {
         $dataPemesanan = $this->DataPemesananModel->select('transaksi.*, barang.namaBarang')
             ->join('barang', 'barang.id = transaksi.id_barang')
+            ->orderBy('tgl_transaksi', 'DESC') // Urutkan berdasarkan tanggal transaksi secara menurun
             ->findAll();
 
         echo json_encode($dataPemesanan);
@@ -103,8 +104,26 @@ class DataPemesanan extends BaseController
 
             if ($transaksiSebelumnya['status'] == 'jalan' && $data['status'] != 'jalan') {
                 $this->updateStokBarang($data['id_barang'], $transaksiSebelumnya['qty']);
-            } elseif ($transaksiSebelumnya['status'] != 'jalan' && $data['status'] == 'jalan' || $data['status'] == 'acc') {
+            } elseif ($transaksiSebelumnya['status'] != 'jalan' && ($data['status'] == 'jalan' || $data['status'] == 'acc')) {
                 $this->updateStokBarang($data['id_barang'], -$data['qty']);
+            }
+
+            return $this->response->setJSON(['status' => 'success']);
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function hapus()
+    {
+        $id = $this->request->getPost('id_transaksi');
+        $transaksi = $this->DataPemesananModel->find($id);
+
+        try {
+            $this->DataPemesananModel->delete($id);
+
+            if ($transaksi['status'] == 'jalan') {
+                $this->updateStokBarang($transaksi['id_barang'], $transaksi['qty']);
             }
 
             return $this->response->setJSON(['status' => 'success']);

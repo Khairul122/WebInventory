@@ -2,110 +2,11 @@
 
 <?php $this->section('content') ?>
 <div class="row">
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Tambah Transaksi</h4>
-            </div>
-            <div class="card-body">
-                <form id="formTambah">
-                    <div class="form-group row">
-                        <label for="id_barang" class="col-sm-2 col-form-label">Barang</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="id_barang" name="id_barang">
-                                <?php foreach ($barang as $b) : ?>
-                                    <option value="<?= $b['id'] ?>"><?= $b['namaBarang'] ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="tgl_transaksi" class="col-sm-2 col-form-label">Tanggal Transaksi</label>
-                        <div class="col-sm-10">
-                            <input type="date" class="form-control" id="tgl_transaksi" name="tgl_transaksi">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="nama_costumer" class="col-sm-2 col-form-label">Nama Customer</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nama_costumer" name="nama_costumer">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="tujuan" class="col-sm-2 col-form-label">Tujuan</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="tujuan" name="tujuan">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="qty" class="col-sm-2 col-form-label">Qty</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="qty" name="qty">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="no_mobil" class="col-sm-2 col-form-label">No Mobil</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="no_mobil" name="no_mobil">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="nama_supir" class="col-sm-2 col-form-label">Nama Supir</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="nama_supir" name="nama_supir">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="no_hp" class="col-sm-2 col-form-label">No HP</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="no_hp" name="no_hp">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="metode_bayar" class="col-sm-2 col-form-label">Metode Bayar</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="metode_bayar" name="metode_bayar">
-                                <option value="cash">Cash</option>
-                                <option value="credit">Credit</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="shift" class="col-sm-2 col-form-label">Shift</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="shift" name="shift">
-                                <option value="pagi">Pagi</option>
-                                <option value="malam">Malam</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="status" class="col-sm-2 col-form-label">Status</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="status" name="status">
-                                <option value="pengajuan">Pengajuan</option>
-                                <option value="antrian">Antrian</option>
-                                <option value="jalan">Jalan</option>
-                                <option value="batal">Batal</option>
-                                <?php if (session()->get('rule') == 0) : ?>
-                                    <option value="acc">ACC</option>
-                                <?php endif; ?>
-                            </select>
-                        </div>
-                    </div>
-                </form>
-                <div class="form-group row">
-                    <div class="col-sm-12 text-center">
-                        <button class="btn btn-info" onclick="tambah()" id="tambah">Tambah</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Daftar Transaksi</h4>
+                <button class="btn btn-info" data-toggle="modal" data-target="#modalTambah">Tambah Transaksi</button>
             </div>
             <div class="card-body" style="overflow-x: auto;">
                 <table class="table">
@@ -115,7 +16,7 @@
                         <th>Tanggal</th>
                         <th>Nama Customer</th>
                         <th>Tujuan</th>
-                        <th>Qty</th>
+                        <th>Qty (Kg)</th>
                         <th>No Mobil</th>
                         <th>Nama Supir</th>
                         <th>No HP</th>
@@ -127,6 +28,89 @@
                     <tbody id="tabelTransaksi">
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Tambah Data -->
+<div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-labelledby="modalTambahLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTambahLabel">Tambah Transaksi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formTambah">
+                    <div class="form-group">
+                        <label for="id_barang">Barang</label>
+                        <select class="form-control" id="id_barang" name="id_barang">
+                            <?php foreach ($barang as $b) : ?>
+                                <option value="<?= $b['id'] ?>"><?= $b['namaBarang'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tgl_transaksi">Tanggal Transaksi</label>
+                        <input type="date" class="form-control" id="tgl_transaksi" name="tgl_transaksi">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_costumer">Nama Customer</label>
+                        <input type="text" class="form-control" id="nama_costumer" name="nama_costumer">
+                    </div>
+                    <div class="form-group">
+                        <label for="tujuan">Tujuan</label>
+                        <input type="text" class="form-control" id="tujuan" name="tujuan">
+                    </div>
+                    <div class="form-group">
+                        <label for="qty">Qty</label>
+                        <input type="number" class="form-control" id="qty" name="qty">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_mobil">No Mobil</label>
+                        <input type="text" class="form-control" id="no_mobil" name="no_mobil">
+                    </div>
+                    <div class="form-group">
+                        <label for="nama_supir">Nama Supir</label>
+                        <input type="text" class="form-control" id="nama_supir" name="nama_supir">
+                    </div>
+                    <div class="form-group">
+                        <label for="no_hp">No HP</label>
+                        <input type="text" class="form-control" id="no_hp" name="no_hp">
+                    </div>
+                    <div class="form-group">
+                        <label for="metode_bayar">Metode Bayar</label>
+                        <select class="form-control" id="metode_bayar" name="metode_bayar">
+                            <option value="cash">Cash</option>
+                            <option value="credit">Credit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="shift">Shift</label>
+                        <select class="form-control" id="shift" name="shift">
+                            <option value="pagi">Pagi</option>
+                            <option value="malam">Malam</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" id="status" name="status">
+                            <option value="pengajuan">Pengajuan</option>
+                            <option value="antrian">Antrian</option>
+                            <option value="jalan">Jalan</option>
+                            <option value="batal">Batal</option>
+                            <?php if (session()->get('rule') == 0) : ?>
+                                <option value="acc">ACC</option>
+                            <?php endif; ?>
+                        </select>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <button class="btn btn-info" onclick="tambah()" id="tambah">Tambah</button>
+                </div>
             </div>
         </div>
     </div>
@@ -291,23 +275,23 @@ function muatData() {
         method: 'post',
         dataType: 'json',
         success: function(data) {
-            var tabel = ''
+            var tabel = '';
             for (let i = 0; i < data.length; i++) {
                 var formattedDate = formatTanggal(data[i].tgl_transaksi);
-                tabel += "<tr><td>" + data[i].id_transaksi + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDate + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td><a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a>";
+                tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDate + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td><a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> <a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a>";
                 <?php if (session()->get('rule') == 0) : ?>
                 tabel += " <a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-eye'></i></a></td></tr>";
                 <?php endif; ?>
             }
             if (!tabel) {
-                tabel = '<td class="text-center" colspan="13">Data Masih kosong :)</td>'
+                tabel = '<td class="text-center" colspan="13">Data Masih kosong :)</td>';
             }
-            $("#tabelTransaksi").html(tabel)
-            $("#tambah").html('Tambah')
+            $("#tabelTransaksi").html(tabel);
+            $("#tambah").html('Tambah');
         },
         error: function() {
-            $("#tambah").html('Tambah')
-            alert('Gagal memuat data, coba lagi.')
+            $("#tambah").html('Tambah');
+            alert('Gagal memuat data, coba lagi.');
         }
     });
 }
@@ -323,7 +307,7 @@ function tambah() {
     if ($("#tgl_transaksi").val() == "" || $("#nama_costumer").val() == "" || $("#tujuan").val() == "" || $("#qty").val() == "" || $("#no_mobil").val() == "" || $("#nama_supir").val() == "" || $("#no_hp").val() == "" || $("#metode_bayar").val() == "" || $("#shift").val() == "" || $("#status").val() == "") {
         alert("Semua field harus diisi!");
     } else {
-        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...')
+        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
         $.ajax({
             type: 'POST',
             data: {
@@ -349,11 +333,11 @@ function tambah() {
                 } else {
                     alert('Gagal menambahkan data: ' + response.message);
                 }
-                $("#tambah").html('Tambah')
+                $("#tambah").html('Tambah');
             },
             error: function() {
-                $("#tambah").html('Tambah')
-                alert('Gagal menambahkan data, coba lagi.')
+                $("#tambah").html('Tambah');
+                alert('Gagal menambahkan data, coba lagi.');
             }
         });
     }
@@ -381,7 +365,7 @@ function edit(id) {
             $('#modalEdit').modal('show');
         },
         error: function() {
-            alert('Gagal mengambil data, coba lagi.')
+            alert('Gagal mengambil data, coba lagi.');
         }
     });
 }
@@ -407,7 +391,7 @@ function preview(id) {
             $('#modalPreview').modal('show');
         },
         error: function() {
-            alert('Gagal mengambil data, coba lagi.')
+            alert('Gagal mengambil data, coba lagi.');
         }
     });
 }
@@ -429,9 +413,31 @@ function updateData() {
             }
         },
         error: function() {
-            alert('Gagal mengupdate data, coba lagi.')
+            alert('Gagal mengupdate data, coba lagi.');
         }
     });
+}
+
+function hapus(id) {
+    if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+        $.ajax({
+            url: '<?= base_url() ?>/dataPemesanan/hapus',
+            method: 'post',
+            data: { id_transaksi: id },
+            dataType: 'json',
+            success: function(response) {
+                if (response.status == 'success') {
+                    alert('Data berhasil dihapus!');
+                    muatData();
+                } else {
+                    alert('Gagal menghapus data: ' + response.message);
+                }
+            },
+            error: function() {
+                alert('Gagal menghapus data, coba lagi.');
+            }
+        });
+    }
 }
 
 muatData();

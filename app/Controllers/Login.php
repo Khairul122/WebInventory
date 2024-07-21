@@ -14,7 +14,7 @@ class Login extends BaseController
     public function index()
     {
         if (session()->get('nama')) {
-            return redirect()->to(base_url() . "/barangmasuk");
+            return redirect()->to(base_url() . "/barang");
         }
         $user = $this->userModel->findAll();
         unset($user["password"]);
@@ -35,7 +35,7 @@ class Login extends BaseController
         } else if (password_verify($password, $user['password'])) {
             session()->set('nama', $user["nama"]);
             session()->set('rule', $user["rule"]);
-            return redirect()->to(base_url() . "/barangmasuk");
+            return redirect()->to(base_url() . "/barang");
         } else {
             session()->setFlashdata('message', '<span class="badge badge-danger">Password Salah :(</span>');
             return redirect()->to(base_url() . "/login");

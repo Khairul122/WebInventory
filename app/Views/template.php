@@ -43,10 +43,10 @@
                         </div>
                         <div class="profile_info">
                             <span>Welcome <?php if (session()->get('rule') == 1) {
-                                            echo "";
-                                        } else {
-                                            echo "";
-                                        } ?></span>
+                                                echo "";
+                                            } else {
+                                                echo "";
+                                            } ?></span>
                             <h2><?= session()->get('nama'); ?></h2>
                         </div>
                     </div>
@@ -58,6 +58,7 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <ul class="nav side-menu">
+                                <li><a href="<?php echo base_url(); ?>/beranda"><i class="fa fa-home"></i>Beranda</a>
                                 <li><a href="<?php echo base_url(); ?>/barang"><i class="fa fa-sign-in"></i>Data Barang</a>
                                 <li><a href="<?php echo base_url(); ?>/mesin"><i class="fa fa-sign-in"></i>Data Mesin</a>
                                 </li>
@@ -110,7 +111,7 @@
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                  
+
                 </div>
                 <div class="clearfix"></div>
             </footer>

@@ -77,7 +77,7 @@
                 dataType: 'json',
                 success: function(data) {
                     var tabel = '<table id="tabelLaporan" class="display table table-striped table-hover"><thead><tr>';
-                    tabel += '<th>NO</th><th>TANGGAL</th><th>NAMA COSTUMER</th><th>TUJUAN</th><th>QTY</th><th>NO MOBIL</th><th>NAMA SUPIR</th><th>NO HP</th><th>METODE BAYAR</th><th>SHIFT</th><th>STATUS</th>';
+                    tabel += '<th>NO</th><th>TANGGAL</th><th>NAMA COSTUMER</th><th>TUJUAN</th><th>Qty (Kg)</th><th>NO MOBIL</th><th>NAMA SUPIR</th><th>NO HP</th><th>METODE BAYAR</th><th>SHIFT</th><th>STATUS</th>';
                     tabel += '</tr></thead><tbody>';
 
                     for (let i = 0; i < data.length; i++) {
