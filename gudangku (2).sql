@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 21, 2024 at 08:57 AM
+-- Generation Time: Jul 25, 2024 at 10:44 AM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.3
 
@@ -30,26 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `barang` (
   `id` int NOT NULL,
   `namaBarang` varchar(32) NOT NULL,
-  `stok` int NOT NULL,
-  `nama_mesin1` varchar(100) NOT NULL,
-  `jumlah1` int NOT NULL,
-  `nama_mesin2` varchar(100) NOT NULL,
-  `jumlah2` int NOT NULL,
-  `nama_mesin3` varchar(100) NOT NULL,
-  `jumlah3` int NOT NULL,
-  `hapus` varchar(1) NOT NULL
+  `waktu` datetime DEFAULT NULL,
+  `nama_mesin` varchar(50) NOT NULL,
+  `qty` int NOT NULL,
+  `stok` int NOT NULL DEFAULT '0',
+  `hapus` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `barang`
 --
 
-INSERT INTO `barang` (`id`, `namaBarang`, `stok`, `nama_mesin1`, `jumlah1`, `nama_mesin2`, `jumlah2`, `nama_mesin3`, `jumlah3`, `hapus`) VALUES
-(1, 'Roma malkist', 15, '0', 0, '0', 0, '0', 0, '1'),
-(2, 'Indomie Soto', 0, '0', 0, '0', 0, '0', 0, '1'),
-(3, 'Kopiko', 2, '0', 0, '0', 0, '0', 0, '1'),
-(4, 'Buku', 7, '0', 0, '0', 0, '0', 0, '1'),
-(5, 'Kopi', 302, 'Mesin 1', 101, 'Mesin 1', 101, 'Mesin 1', 101, '0');
+INSERT INTO `barang` (`id`, `namaBarang`, `waktu`, `nama_mesin`, `qty`, `stok`, `hapus`) VALUES
+(23, 'Pupuk ADS', '2024-07-21 23:40:10', 'Mesin 1', 10, 10, 0),
+(25, 'Pupuk ADS', '2024-07-21 23:54:47', 'Mesin 1', 10, 14, 0);
 
 -- --------------------------------------------------------
 
@@ -77,7 +71,7 @@ INSERT INTO `mesin` (`id_mesin`, `nama_mesin`) VALUES
 
 CREATE TABLE `transaksi` (
   `id_transaksi` int NOT NULL,
-  `tgl_transaksi` date NOT NULL,
+  `tgl_transaksi` datetime NOT NULL,
   `nama_costumer` varchar(100) NOT NULL,
   `tujuan` varchar(255) NOT NULL,
   `qty` int NOT NULL,
@@ -87,17 +81,16 @@ CREATE TABLE `transaksi` (
   `metode_bayar` enum('cash','credit') NOT NULL,
   `shift` enum('pagi','malam') NOT NULL,
   `status` enum('pengajuan','antrian','jalan','batal','acc') NOT NULL,
-  `id_barang` int DEFAULT NULL
+  `id_barang` int DEFAULT NULL,
+  `nama_admin` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_transaksi`, `tgl_transaksi`, `nama_costumer`, `tujuan`, `qty`, `no_mobil`, `nama_supir`, `no_hp`, `metode_bayar`, `shift`, `status`, `id_barang`) VALUES
-(1, '2024-07-17', 'Budi', 'Bekasi', 1, 'HIU1', 'Budi1', '082165443677', 'cash', 'pagi', 'acc', 4),
-(4, '2024-07-21', 'Andika', 'Bekasi', 1, 'HIU1', 'Budi1', '082165443677', 'cash', 'pagi', 'jalan', 5),
-(5, '2024-07-21', 'Andi', 'Bekaso', 3, 'HIU1', 'Budi1', '082165443677', 'cash', 'pagi', 'pengajuan', 5);
+INSERT INTO `transaksi` (`id_transaksi`, `tgl_transaksi`, `nama_costumer`, `tujuan`, `qty`, `no_mobil`, `nama_supir`, `no_hp`, `metode_bayar`, `shift`, `status`, `id_barang`, `nama_admin`) VALUES
+(7, '2024-07-22 03:29:45', 'Budi', 'Bekasi', 2, 'HIU1', 'Budi1', '082165443677', 'credit', 'malam', 'acc', 25, 'Admin Kantor');
 
 -- --------------------------------------------------------
 
@@ -117,8 +110,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nama`, `password`, `rule`) VALUES
-(1, 'Admin Gudang', '$2y$10$yuPmzFjZKTHojkqnWote0Ob.jR4M9PbRwgN7FrkXs8Z.CLw0ygA86', '1'),
-(2, 'Admin Kantor', '$2y$10$q95JNtXMWaoZFTmOxWYwOeNcL3iRyELos94.9SBvpWXZqQ4OvPfpC', '0');
+(1, 'Admin Kantor', '$2y$10$yuPmzFjZKTHojkqnWote0Ob.jR4M9PbRwgN7FrkXs8Z.CLw0ygA86', '1'),
+(2, 'Admin Gudang', '$2y$10$q95JNtXMWaoZFTmOxWYwOeNcL3iRyELos94.9SBvpWXZqQ4OvPfpC', '0'),
+(3, 'Budi', '$2y$10$pOpahwYrIbRt8Hrj4rcO/eEQSrKTl4k6dTqB79uYDMXda3QqcXU8u', '0');
 
 --
 -- Indexes for dumped tables
@@ -157,7 +151,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `mesin`
@@ -169,13 +163,13 @@ ALTER TABLE `mesin`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
