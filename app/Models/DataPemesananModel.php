@@ -19,7 +19,8 @@ class DataPemesananModel extends Model
         'metode_bayar', 
         'shift', 
         'status',
-        'id_barang'
+        'id_barang',
+        'nama_admin'
     ];
 
     public function getAllTransaksi()
@@ -29,5 +30,13 @@ class DataPemesananModel extends Model
         $builder->join('barang', 'barang.id = transaksi.id_barang');
         $query = $builder->get();
         return $query->getResultArray();
+    }
+    
+    public function getLatestBarang()
+    {
+        $builder = $this->db->table('barang');
+        $builder->orderBy('id', 'DESC');
+        $query = $builder->get(1); // Get the latest one
+        return $query->getRowArray();
     }
 }

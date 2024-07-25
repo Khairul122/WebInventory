@@ -23,6 +23,7 @@ class DataPemesanan extends BaseController
         }
 
         $data['barang'] = $this->BarangModel->where('hapus', 0)->findAll();
+        $data['barang'] = $this->DataPemesananModel->getLatestBarang();
         return view('dataPemesanan', $data);
     }
 
@@ -30,7 +31,6 @@ class DataPemesanan extends BaseController
     {
         $dataPemesanan = $this->DataPemesananModel->select('transaksi.*, barang.namaBarang')
             ->join('barang', 'barang.id = transaksi.id_barang')
-            ->orderBy('tgl_transaksi', 'DESC') // Urutkan berdasarkan tanggal transaksi secara menurun
             ->findAll();
 
         echo json_encode($dataPemesanan);
@@ -39,12 +39,13 @@ class DataPemesanan extends BaseController
     public function getById()
     {
         $id = $this->request->getPost('id_transaksi');
-        $data = $this->DataPemesananModel->select('transaksi.*, barang.namaBarang')
+        $data = $this->DataPemesananModel->select('transaksi.*, barang.namaBarang, barang.stok')
             ->join('barang', 'barang.id = transaksi.id_barang')
             ->where('transaksi.id_transaksi', $id)
             ->first();
         echo json_encode($data);
     }
+    
 
     public function tambah()
     {
@@ -82,9 +83,9 @@ class DataPemesanan extends BaseController
     public function update()
     {
         $id = $this->request->getPost('id_transaksi');
-        
+    
         $transaksiSebelumnya = $this->DataPemesananModel->find($id);
-
+    
         $data = [
             "tgl_transaksi" => $this->request->getPost("tgl_transaksi"),
             "nama_costumer" => $this->request->getPost("nama_costumer"),
@@ -98,39 +99,27 @@ class DataPemesanan extends BaseController
             "status" => $this->request->getPost("status"),
             "id_barang" => $this->request->getPost("id_barang")
         ];
-
+    
+        // Tambahkan nama_admin jika status berubah menjadi acc
+        if ($data['status'] == 'acc') {
+            $data['nama_admin'] = session()->get('nama');
+        }
+    
         try {
             $this->DataPemesananModel->update($id, $data);
-
+    
             if ($transaksiSebelumnya['status'] == 'jalan' && $data['status'] != 'jalan') {
                 $this->updateStokBarang($data['id_barang'], $transaksiSebelumnya['qty']);
-            } elseif ($transaksiSebelumnya['status'] != 'jalan' && ($data['status'] == 'jalan' || $data['status'] == 'acc')) {
+            } elseif ($transaksiSebelumnya['status'] != 'jalan' && $data['status'] == 'jalan' || $data['status'] == 'acc') {
                 $this->updateStokBarang($data['id_barang'], -$data['qty']);
             }
-
+    
             return $this->response->setJSON(['status' => 'success']);
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
-
-    public function hapus()
-    {
-        $id = $this->request->getPost('id_transaksi');
-        $transaksi = $this->DataPemesananModel->find($id);
-
-        try {
-            $this->DataPemesananModel->delete($id);
-
-            if ($transaksi['status'] == 'jalan') {
-                $this->updateStokBarang($transaksi['id_barang'], $transaksi['qty']);
-            }
-
-            return $this->response->setJSON(['status' => 'success']);
-        } catch (\Exception $e) {
-            return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
-        }
-    }
+    
 
     private function updateStokBarang($id_barang, $qty)
     {
@@ -144,6 +133,16 @@ class DataPemesanan extends BaseController
             }
 
             $this->BarangModel->update($id_barang, ['stok' => $stokBaru]);
+        }
+    }
+    public function hapus()
+    {
+        $id = $this->request->getPost('id_transaksi');
+        try {
+            $this->DataPemesananModel->delete($id);
+            return $this->response->setJSON(['status' => 'success']);
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
 }

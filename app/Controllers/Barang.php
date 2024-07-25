@@ -23,7 +23,7 @@ class Barang extends BaseController
 
     public function muatData()
     {
-        echo json_encode($this->barangModel->where('hapus', 0)->findAll());
+        echo json_encode($this->barangModel->findAll());
     }
 
     public function muatMesin()
@@ -33,47 +33,71 @@ class Barang extends BaseController
 
     public function tambah()
     {
+        $waktu = $this->request->getPost("waktu");
+
         $data = [
             "namaBarang" => $this->request->getPost("namaBarang"),
-            "stok" => $this->request->getPost("stok"),
-            "nama_mesin1" => $this->request->getPost("nama_mesin1"),
-            "jumlah1" => $this->request->getPost("jumlah1"),
-            "nama_mesin2" => $this->request->getPost("nama_mesin2"),
-            "jumlah2" => $this->request->getPost("jumlah2"),
-            "nama_mesin3" => $this->request->getPost("nama_mesin3"),
-            "jumlah3" => $this->request->getPost("jumlah3"),
-            "hapus" => 0
+            "waktu" => $waktu,
+            "nama_mesin" => $this->request->getPost("nama_mesin"),
+            "qty" => $this->request->getPost("qty"),
+            "stok" => 0,  // Inisialisasi stok dengan 0, akan diperbarui nanti
         ];
 
-        $this->barangModel->save($data);
-
-        echo json_encode("");
+        try {
+            $this->barangModel->save($data);
+            $insertedId = $this->barangModel->insertID();
+            $this->updateStok($insertedId);
+            echo json_encode("Data berhasil ditambahkan");
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            echo json_encode("Terjadi kesalahan: " . $e->getMessage());
+        }
     }
 
     public function edit()
     {
+        $id = $this->request->getPost("id");
+        $waktu = $this->request->getPost("waktu");
+
         $data = [
             "namaBarang" => $this->request->getPost("namaBarang"),
-            "stok" => $this->request->getPost("stok"),
-            "nama_mesin1" => $this->request->getPost("nama_mesin1"),
-            "jumlah1" => $this->request->getPost("jumlah1"),
-            "nama_mesin2" => $this->request->getPost("nama_mesin2"),
-            "jumlah2" => $this->request->getPost("jumlah2"),
-            "nama_mesin3" => $this->request->getPost("nama_mesin3"),
-            "jumlah3" => $this->request->getPost("jumlah3"),
+            "waktu" => $waktu,
+            "nama_mesin" => $this->request->getPost("nama_mesin"),
+            "qty" => $this->request->getPost("qty"),
         ];
 
-        $this->barangModel->update($this->request->getPost("id"), $data);
-
-        echo json_encode("");
+        try {
+            $this->barangModel->update($id, $data);
+            $this->updateStok($id);
+            echo json_encode("Data berhasil diperbarui");
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            echo json_encode("Terjadi kesalahan: " . $e->getMessage());
+        }
     }
 
     public function hapus()
     {
-        $data = [
-            "hapus" => 1
-        ];
-        $this->barangModel->update($this->request->getPost("id"), $data);
-        echo json_encode("");
+        $id = $this->request->getPost("id");
+        try {
+            $this->barangModel->delete($id);
+            $this->updateStok();
+            echo json_encode("Data berhasil dihapus");
+        } catch (\Exception $e) {
+            log_message('error', $e->getMessage());
+            echo json_encode("Terjadi kesalahan: " . $e->getMessage());
+        }
+    }
+
+    private function updateStok($id = null)
+    {
+        if ($id) {
+            $barang = $this->barangModel->find($id);
+            if ($barang) {
+                $totalQty = $this->barangModel->selectSum('qty')->get()->getRow()->qty;
+                $this->barangModel->update($id, ['stok' => $totalQty]);
+            }
+        }
     }
 }
+?>

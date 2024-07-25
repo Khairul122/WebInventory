@@ -11,19 +11,21 @@
             <div class="card-body" style="overflow-x: auto;">
                 <table class="table">
                     <thead class="text-info">
-                        <th>No</th>
-                        <th>Barang</th>
-                        <th>Tanggal</th>
-                        <th>Nama Customer</th>
-                        <th>Tujuan</th>
-                        <th>Qty (Kg)</th>
-                        <th>No Mobil</th>
-                        <th>Nama Supir</th>
-                        <th>No HP</th>
-                        <th>Metode Bayar</th>
-                        <th>Shift</th>
-                        <th>Status</th>
-                        <th>Aksi</th>
+                        <tr>
+                            <th>No</th>
+                            <th>Barang</th>
+                            <th>Tanggal</th>
+                            <th>Nama Customer</th>
+                            <th>Tujuan</th>
+                            <th>Qty (Kg)</th>
+                            <th>No Mobil</th>
+                            <th>Nama Supir</th>
+                            <th>No HP</th>
+                            <th>Metode Bayar</th>
+                            <th>Shift</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
                     </thead>
                     <tbody id="tabelTransaksi">
                     </tbody>
@@ -48,14 +50,16 @@
                     <div class="form-group">
                         <label for="id_barang">Barang</label>
                         <select class="form-control" id="id_barang" name="id_barang">
-                            <?php foreach ($barang as $b) : ?>
-                                <option value="<?= $b['id'] ?>"><?= $b['namaBarang'] ?></option>
-                            <?php endforeach; ?>
+                            <?php if ($barang) : ?>
+                                <option value="<?= $barang['id'] ?>"><?= $barang['namaBarang'] ?> - Stok: <?= $barang['stok'] ?></option>
+                            <?php else : ?>
+                                <option value="">Barang tidak tersedia</option>
+                            <?php endif; ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="tgl_transaksi">Tanggal Transaksi</label>
-                        <input type="date" class="form-control" id="tgl_transaksi" name="tgl_transaksi">
+                        <input type="text" class="form-control datetimepicker" id="tgl_transaksi" name="tgl_transaksi">
                     </div>
                     <div class="form-group">
                         <label for="nama_costumer">Nama Customer</label>
@@ -102,7 +106,7 @@
                             <option value="antrian">Antrian</option>
                             <option value="jalan">Jalan</option>
                             <option value="batal">Batal</option>
-                            <?php if (session()->get('rule') == 0) : ?>
+                            <?php if (session()->get('rule') == 1) : ?>
                                 <option value="acc">ACC</option>
                             <?php endif; ?>
                         </select>
@@ -132,14 +136,16 @@
                     <div class="form-group">
                         <label for="edit_id_barang">Barang</label>
                         <select class="form-control" id="edit_id_barang" name="id_barang">
-                            <?php foreach ($barang as $b) : ?>
-                                <option value="<?= $b['id'] ?>"><?= $b['namaBarang'] ?></option>
-                            <?php endforeach; ?>
+                            <?php if ($barang) : ?>
+                                <option value="<?= $barang['id'] ?>"><?= $barang['namaBarang'] ?> - Stok: <?= $barang['stok'] ?></option>
+                            <?php else : ?>
+                                <option value="">Barang tidak tersedia</option>
+                            <?php endif; ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="edit_tgl_transaksi">Tanggal Transaksi</label>
-                        <input type="date" class="form-control" id="edit_tgl_transaksi" name="tgl_transaksi">
+                        <input type="text" class="form-control datetimepicker" id="edit_tgl_transaksi" name="tgl_transaksi">
                     </div>
                     <div class="form-group">
                         <label for="edit_nama_costumer">Nama Customer</label>
@@ -186,7 +192,7 @@
                             <option value="antrian">Antrian</option>
                             <option value="jalan">Jalan</option>
                             <option value="batal">Batal</option>
-                            <?php if (session()->get('rule') == 0) : ?>
+                            <?php if (session()->get('rule') == 1) : ?>
                                 <option value="acc">ACC</option>
                             <?php endif; ?>
                         </select>
@@ -206,59 +212,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="modalPreviewLabel">Preview Transaksi</h5>
+                <h5 class="modal-title" id="modalPreviewLabel">Preview DO</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form id="formPreview">
-                    <!-- Fields to preview the transaction -->
-                    <div class="form-group">
-                        <label for="preview_id_barang">Barang</label>
-                        <input type="text" class="form-control" id="preview_id_barang" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_tgl_transaksi">Tanggal Transaksi</label>
-                        <input type="date" class="form-control" id="preview_tgl_transaksi" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_nama_costumer">Nama Customer</label>
-                        <input type="text" class="form-control" id="preview_nama_costumer" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_tujuan">Tujuan</label>
-                        <input type="text" class="form-control" id="preview_tujuan" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_qty">Qty</label>
-                        <input type="number" class="form-control" id="preview_qty" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_no_mobil">No Mobil</label>
-                        <input type="text" class="form-control" id="preview_no_mobil" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_nama_supir">Nama Supir</label>
-                        <input type="text" class="form-control" id="preview_nama_supir" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_no_hp">No HP</label>
-                        <input type="text" class="form-control" id="preview_no_hp" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_metode_bayar">Metode Bayar</label>
-                        <input type="text" class="form-control" id="preview_metode_bayar" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_shift">Shift</label>
-                        <input type="text" class="form-control" id="preview_shift" disabled>
-                    </div>
-                    <div class="form-group">
-                        <label for="preview_status">Status</label>
-                        <input type="text" class="form-control" id="preview_status" disabled>
-                    </div>
-                </form>
+                <div id="pdfPreview" style="width: 100%; height: 500px;"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
@@ -267,180 +227,340 @@
     </div>
 </div>
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery Datetimepicker -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- PDFObject -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.21/jspdf.plugin.autotable.min.js"></script>
+
 <script>
-function muatData() {
-    $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...')
-    $.ajax({
-        url: '<?= base_url() ?>/dataPemesanan/muatData',
-        method: 'post',
-        dataType: 'json',
-        success: function(data) {
-            var tabel = '';
-            for (let i = 0; i < data.length; i++) {
-                var formattedDate = formatTanggal(data[i].tgl_transaksi);
-                tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDate + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td><a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> <a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a>";
-                <?php if (session()->get('rule') == 0) : ?>
-                tabel += " <a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-eye'></i></a></td></tr>";
-                <?php endif; ?>
-            }
-            if (!tabel) {
-                tabel = '<td class="text-center" colspan="13">Data Masih kosong :)</td>';
-            }
-            $("#tabelTransaksi").html(tabel);
-            $("#tambah").html('Tambah');
-        },
-        error: function() {
-            $("#tambah").html('Tambah');
-            alert('Gagal memuat data, coba lagi.');
-        }
-    });
-}
-
-function formatTanggal(dateString) {
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    var locale = 'id-ID';
-    var date = new Date(dateString);
-    return date.toLocaleDateString(locale, options);
-}
-
-function tambah() {
-    if ($("#tgl_transaksi").val() == "" || $("#nama_costumer").val() == "" || $("#tujuan").val() == "" || $("#qty").val() == "" || $("#no_mobil").val() == "" || $("#nama_supir").val() == "" || $("#no_hp").val() == "" || $("#metode_bayar").val() == "" || $("#shift").val() == "" || $("#status").val() == "") {
-        alert("Semua field harus diisi!");
-    } else {
-        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
-        $.ajax({
-            type: 'POST',
-            data: {
-                tgl_transaksi: $("#tgl_transaksi").val(),
-                nama_costumer: $("#nama_costumer").val(),
-                tujuan: $("#tujuan").val(),
-                qty: $("#qty").val(),
-                no_mobil: $("#no_mobil").val(),
-                nama_supir: $("#nama_supir").val(),
-                no_hp: $("#no_hp").val(),
-                metode_bayar: $("#metode_bayar").val(),
-                shift: $("#shift").val(),
-                status: $("#status").val(),
-                id_barang: $("#id_barang").val()
-            },
-            url: '<?= base_url() ?>/dataPemesanan/tambah',
-            dataType: 'json',
-            success: function(response) {
-                if (response.status == 'success') {
-                    alert('Data berhasil ditambahkan!');
-                    $("#formTambah")[0].reset();
-                    muatData();
-                } else {
-                    alert('Gagal menambahkan data: ' + response.message);
-                }
-                $("#tambah").html('Tambah');
-            },
-            error: function() {
-                $("#tambah").html('Tambah');
-                alert('Gagal menambahkan data, coba lagi.');
-            }
+    $(document).ready(function() {
+        $('.datetimepicker').datetimepicker({
+            format: 'Y-m-d H:i:s',
+            step: 1
         });
-    }
-}
 
-function edit(id) {
-    $.ajax({
-        url: '<?= base_url() ?>/dataPemesanan/getById',
-        method: 'post',
-        data: { id_transaksi: id },
-        dataType: 'json',
-        success: function(data) {
-            $("#edit_id_transaksi").val(data.id_transaksi);
-            $("#edit_id_barang").val(data.id_barang);
-            $("#edit_tgl_transaksi").val(data.tgl_transaksi);
-            $("#edit_nama_costumer").val(data.nama_costumer);
-            $("#edit_tujuan").val(data.tujuan);
-            $("#edit_qty").val(data.qty);
-            $("#edit_no_mobil").val(data.no_mobil);
-            $("#edit_nama_supir").val(data.nama_supir);
-            $("#edit_no_hp").val(data.no_hp);
-            $("#edit_metode_bayar").val(data.metode_bayar);
-            $("#edit_shift").val(data.shift);
-            $("#edit_status").val(data.status);
-            $('#modalEdit').modal('show');
-        },
-        error: function() {
-            alert('Gagal mengambil data, coba lagi.');
-        }
+        muatData();
     });
-}
 
-function preview(id) {
-    $.ajax({
-        url: '<?= base_url() ?>/dataPemesanan/getById',
-        method: 'post',
-        data: { id_transaksi: id },
-        dataType: 'json',
-        success: function(data) {
-            $("#preview_id_barang").val(data.namaBarang);
-            $("#preview_tgl_transaksi").val(data.tgl_transaksi);
-            $("#preview_nama_costumer").val(data.nama_costumer);
-            $("#preview_tujuan").val(data.tujuan);
-            $("#preview_qty").val(data.qty);
-            $("#preview_no_mobil").val(data.no_mobil);
-            $("#preview_nama_supir").val(data.nama_supir);
-            $("#preview_no_hp").val(data.no_hp);
-            $("#preview_metode_bayar").val(data.metode_bayar);
-            $("#preview_shift").val(data.shift);
-            $("#preview_status").val(data.status);
-            $('#modalPreview').modal('show');
-        },
-        error: function() {
-            alert('Gagal mengambil data, coba lagi.');
-        }
-    });
-}
+    var sessionRule = <?= session()->get('rule') ?>;
 
-function updateData() {
-    var data = $("#formEdit").serialize();
-    $.ajax({
-        url: '<?= base_url() ?>/dataPemesanan/update',
-        method: 'post',
-        data: data,
-        dataType: 'json',
-        success: function(response) {
-            if (response.status == 'success') {
-                $('#modalEdit').modal('hide');
-                muatData();
-                alert('Data berhasil diperbarui!');
-            } else {
-                alert('Gagal mengupdate data: ' + response.message);
-            }
-        },
-        error: function() {
-            alert('Gagal mengupdate data, coba lagi.');
-        }
-    });
-}
-
-function hapus(id) {
-    if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+    function muatData() {
+        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...')
         $.ajax({
-            url: '<?= base_url() ?>/dataPemesanan/hapus',
+            url: '<?= base_url() ?>/dataPemesanan/muatData',
             method: 'post',
-            data: { id_transaksi: id },
             dataType: 'json',
-            success: function(response) {
-                if (response.status == 'success') {
-                    alert('Data berhasil dihapus!');
-                    muatData();
-                } else {
-                    alert('Gagal menghapus data: ' + response.message);
+            success: function(data) {
+                var tabel = '';
+                for (let i = 0; i < data.length; i++) {
+                    var formattedDateTime = formatTanggal(data[i].tgl_transaksi);
+                    tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDateTime + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td>";
+                    tabel += "<a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> ";
+                    tabel += "<a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a> ";
+                    if (sessionRule == 0 && data[i].status == 'acc') {
+                        tabel += "<a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-print'></i></a> ";
+                    }
+                    tabel += "</td></tr>";
                 }
+                if (!tabel) {
+                    tabel = '<td class="text-center" colspan="13">Data Masih kosong :)</td>';
+                }
+                $("#tabelTransaksi").html(tabel);
+                $("#tambah").html('Tambah');
             },
             error: function() {
-                alert('Gagal menghapus data, coba lagi.');
+                $("#tambah").html('Tambah');
+                alert('Gagal memuat data, coba lagi.');
             }
         });
     }
-}
 
-muatData();
+    function formatTanggal(dateString) {
+        var date = new Date(dateString);
+        var options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        };
+        return date.toLocaleDateString('id-ID', options).replace(' pukul', ',');
+    }
+
+    function tambah() {
+        if ($("#tgl_transaksi").val() == "" || $("#nama_costumer").val() == "" || $("#tujuan").val() == "" || $("#qty").val() == "" || $("#no_mobil").val() == "" || $("#nama_supir").val() == "" || $("#no_hp").val() == "" || $("#metode_bayar").val() == "" || $("#shift").val() == "" || $("#status").val() == "") {
+            alert("Semua field harus diisi!");
+        } else {
+            $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
+            $.ajax({
+                type: 'POST',
+                data: {
+                    tgl_transaksi: $("#tgl_transaksi").val(),
+                    nama_costumer: $("#nama_costumer").val(),
+                    tujuan: $("#tujuan").val(),
+                    qty: $("#qty").val(),
+                    no_mobil: $("#no_mobil").val(),
+                    nama_supir: $("#nama_supir").val(),
+                    no_hp: $("#no_hp").val(),
+                    metode_bayar: $("#metode_bayar").val(),
+                    shift: $("#shift").val(),
+                    status: $("#status").val(),
+                    id_barang: $("#id_barang").val()
+                },
+                url: '<?= base_url() ?>/dataPemesanan/tambah',
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status == 'success') {
+                        alert('Data berhasil ditambahkan!');
+                        $("#formTambah")[0].reset();
+                        muatData();
+                    } else {
+                        alert('Gagal menambahkan data: ' + response.message);
+                    }
+                    $("#tambah").html('Tambah');
+                },
+                error: function() {
+                    $("#tambah").html('Tambah');
+                    alert('Gagal menambahkan data, coba lagi.');
+                }
+            });
+        }
+    }
+
+    function edit(id) {
+        $.ajax({
+            url: '<?= base_url() ?>/dataPemesanan/getById',
+            method: 'post',
+            data: {
+                id_transaksi: id
+            },
+            dataType: 'json',
+            success: function(data) {
+                $("#edit_id_transaksi").val(data.id_transaksi);
+                $("#edit_id_barang").val(data.id_barang);
+                $("#edit_tgl_transaksi").val(data.tgl_transaksi.replace(" ", "T"));
+                $("#edit_nama_costumer").val(data.nama_costumer);
+                $("#edit_tujuan").val(data.tujuan);
+                $("#edit_qty").val(data.qty);
+                $("#edit_no_mobil").val(data.no_mobil);
+                $("#edit_nama_supir").val(data.nama_supir);
+                $("#edit_no_hp").val(data.no_hp);
+                $("#edit_metode_bayar").val(data.metode_bayar);
+                $("#edit_shift").val(data.shift);
+                $("#edit_status").val(data.status);
+                $('#modalEdit').modal('show');
+            },
+            error: function() {
+                alert('Gagal mengambil data, coba lagi.');
+            }
+        });
+    }
+
+    function preview(id) {
+        $.ajax({
+            url: `<?= base_url() ?>/dataPemesanan/getById`,
+            method: 'post',
+            data: {
+                id_transaksi: id
+            },
+            dataType: 'json',
+            success: function(data) {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                const img = new Image();
+                img.src = '<?= base_url() ?>/public/images/logo-ads.jpg';
+                img.onload = function() {
+                    doc.addImage(img, 'JPEG', 20, 10, 20, 20);
+                    doc.setFont("helvetica", "bold");
+                    doc.setFontSize(16);
+                    doc.text("PT. ANDALAS DOLOMIT SEJAHTERA", 105, 40, null, null, 'center');
+
+                    doc.setFont("helvetica", "normal");
+                    doc.setFontSize(10);
+                    const lineHeight = 5;
+                    const address = [
+                        "Jln Rambutan Komplek Ruko Royal Mansion Blok B No.2 RT 006, RW 001",
+                        "Kel. Sidomulyo Timur",
+                        "Kec. Marpoyan Damai Kota Pekanbaru, Riau (28125)"
+                    ];
+                    let startY = 50;
+                    address.forEach((line) => {
+                        doc.text(line, 20, startY);
+                        startY += lineHeight;
+                    });
+
+                    doc.text("No. Sj : 0", 160, 50);
+                    doc.text("No. PO : 0", 160, 60);
+
+                    doc.setFontSize(12);
+                    doc.setFont("helvetica", "bold");
+                    doc.text("SURAT PERMINTAAN PENGELUARAN BARANG", 105, 80, null, null, 'center');
+                    doc.setFont("helvetica", "normal");
+
+                    doc.autoTable({
+                        startY: 90,
+                        head: [['No', 'Jenis Barang', 'Qty', 'Unit', 'Total Unit', 'Remark']],
+                        body: [['1', data.namaBarang, data.qty, 'KG', data.stok, 'OK']],
+                        theme: 'grid',
+                        styles: {
+                            fontSize: 10,
+                            cellPadding: 1,
+                            halign: 'center',
+                            valign: 'middle',
+                            lineWidth: 0.1,
+                            lineColor: [0, 0, 0]
+                        },
+                        headStyles: {
+                            fillColor: [255, 255, 255],
+                            textColor: [0, 0, 0],
+                            fontStyle: 'bold',
+                            lineWidth: 0.1,
+                            lineColor: [0, 0, 0]
+                        },
+                        tableLineColor: [0, 0, 0],
+                        tableLineWidth: 0.1,
+                        margin: { left: 20, right: 20 },
+                        tableWidth: 'auto'
+                    });
+
+                    const now = new Date();
+                    const options = {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    };
+                    const formattedDate = now.toLocaleDateString('id-ID', options);
+
+                    let tableEndY = doc.autoTable.previous.finalY + 10;
+                    const leftPadding = 1;
+
+                    doc.text("Nama Pembeli", 20 + leftPadding, tableEndY);
+                    doc.text(`: ${data.nama_costumer}`, 60 + leftPadding, tableEndY);
+                    tableEndY += lineHeight;
+                    doc.text("Tujuan", 20 + leftPadding, tableEndY);
+                    doc.text(`: ${data.tujuan}`, 60 + leftPadding, tableEndY);
+                    tableEndY += lineHeight;
+                    doc.text("Angkutan", 20 + leftPadding, tableEndY);
+                    doc.text(`: ${data.nama_supir}`, 60 + leftPadding, tableEndY);
+                    tableEndY += lineHeight;
+                    doc.text("No Polisi", 20 + leftPadding, tableEndY);
+                    doc.text(`: ${data.no_mobil}`, 60 + leftPadding, tableEndY);
+                    tableEndY += lineHeight;
+                    doc.text("No HP Supir", 20 + leftPadding, tableEndY);
+                    doc.text(`: ${data.no_hp}`, 60 + leftPadding, tableEndY);
+
+                    const signatureData = [
+                        ['Dibuat Oleh', 'Disetujui Oleh'],
+                        [`Nama : ${data.nama_admin || ''}\nTanggal : ${formattedDate}`, `Nama : DIREKTUR\nTanggal : ${formattedDate}`]
+                    ];
+
+                    doc.autoTable({
+                        startY: tableEndY + 20,
+                        head: [signatureData[0]],
+                        body: [signatureData[1]],
+                        theme: 'grid',
+                        styles: {
+                            fontSize: 10,
+                            cellPadding: {
+                                top: 3,
+                                right: 5,
+                                bottom: 3,
+                                left: 5
+                            },
+                            valign: 'top',
+                            lineColor: [0, 0, 0],
+                            lineWidth: 0.1,
+                            minCellHeight: 10,
+                        },
+                        headStyles: {
+                            fontStyle: 'bold',
+                            halign: 'left',
+                            fillColor: [255, 255, 255],
+                            textColor: [0, 0, 0],
+                        },
+                        bodyStyles: {
+                            halign: 'left',
+                            cellPadding: {
+                                top: 5,
+                                right: 5,
+                                bottom: 35,
+                                left: 5
+                            },
+                        },
+                        columnStyles: {
+                            0: { cellWidth: 60, halign: 'left' },
+                            1: { cellWidth: 60, halign: 'left' },
+                        },
+                        margin: { left: 20 },
+                    });
+
+                    const pdfBlob = doc.output('blob');
+                    const pdfUrl = URL.createObjectURL(pdfBlob);
+
+                    PDFObject.embed(pdfUrl, "#pdfPreview");
+                    $('#modalPreview').modal('show');
+                };
+            },
+            error: function() {
+                alert('Gagal mengambil data, coba lagi.');
+            }
+        });
+    }
+
+    function updateData() {
+        var data = $("#formEdit").serialize();
+        $.ajax({
+            url: '<?= base_url() ?>/dataPemesanan/update',
+            method: 'post',
+            data: data,
+            dataType: 'json',
+            success: function(response) {
+                if (response.status == 'success') {
+                    $('#modalEdit').modal('hide');
+                    muatData();
+                    alert('Data berhasil diperbarui!');
+                } else {
+                    alert('Gagal mengupdate data: ' + response.message);
+                }
+            },
+            error: function() {
+                alert('Gagal mengupdate data, coba lagi.');
+            }
+        });
+    }
+
+    function hapus(id) {
+        if (confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+            $.ajax({
+                url: '<?= base_url() ?>/dataPemesanan/hapus',
+                method: 'post',
+                data: { id_transaksi: id },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.status == 'success') {
+                        alert('Data berhasil dihapus!');
+                        muatData();
+                    } else {
+                        alert('Gagal menghapus data: ' + response.message);
+                    }
+                },
+                error: function() {
+                    alert('Gagal menghapus data, coba lagi.');
+                }
+            });
+        }
+    }
 </script>
 
 <?php $this->endSection() ?>

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bengkelin | <?= $url->getSegment(3) ?></title>
+    <title><?= $url->getSegment(3) ?></title>
 
     <!-- Bootstrap -->
     <link href="<?= base_url() ?>/public/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,18 +66,14 @@
                                 </li>
                                 <li><a href="<?php echo base_url(); ?>/laporan"><i class="fa fa-line-chart"></i> Laporan</a>
                                 </li>
+                                </li>
                             </ul>
-                        </div>
-                        <!-- <div class="menu_section">
-                            <h3>Data</h3>
                             <ul class="nav side-menu">
-                                <li><a href="<?php echo base_url(); ?>/barang"><i class="fa fa-th"></i> Barang</a></li>
                                 <?php if (session()->get("rule") == 1) : ?>
                                     <li><a href="<?php echo base_url(); ?>/user"><i class="fa fa-user"></i> User</a></li>
                                 <?php endif; ?>
                             </ul>
-                        </div> -->
-
+                        </div>
                     </div>
                     <!-- /sidebar menu -->
                 </div>

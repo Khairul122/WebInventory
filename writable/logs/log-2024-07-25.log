@@ -1,0 +1,24 @@
+CRITICAL - 2024-07-25 03:43:44 --> session_start(): A session had already been started - ignoring
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start()...', 'C:\\laragon\\www\\...', 3, Array)
+#1 C:\laragon\www\gudangku\app\Views\dataPemesanan.php(3): session_start()
+#2 C:\laragon\www\gudangku\system\View\View.php(214): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\laragon\www\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('dataPemesanan', Array, true)
+#5 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(27): view('dataPemesanan', Array)
+#6 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-07-25 03:43:50 --> session_start(): A session had already been started - ignoring
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start()...', 'C:\\laragon\\www\\...', 3, Array)
+#1 C:\laragon\www\gudangku\app\Views\dataPemesanan.php(3): session_start()
+#2 C:\laragon\www\gudangku\system\View\View.php(214): include('C:\\laragon\\www\\...')
+#3 C:\laragon\www\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\laragon\www\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('dataPemesanan', Array, true)
+#5 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(27): view('dataPemesanan', Array)
+#6 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}

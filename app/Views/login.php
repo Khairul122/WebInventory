@@ -46,7 +46,7 @@
         }
 
         .login-form input[type="password"],
-        .login-form select {
+        .login-form input[type="text"] {
             margin-bottom: 10px;
             height: 45px;
             font-size: 18px;
@@ -82,18 +82,14 @@
 <body>
     <div class="login-wrapper">
         <div class="login-header">
-            <h1>Inventori</h1>
+        <img src="<?= base_url() ?>/public/images/logo-ads.jpg" style="width: 150px;">
+            <h1>Selamat Datang</h1>
             <br>
         </div>
         <form class="login-form" method="post" action="<?= base_url() ?>/login/auth">
             <?php echo session()->getFlashdata('message'); ?>
             <div class="form-group">
-                <select class="form-control" id="nama" name="nama" required>
-                    <option value="" disabled selected>Select User</option>
-                    <?php for ($i = 0; $i < count($user); $i++) : ?>
-                        <option value="<?= $user[$i]["id"] ?>"><?= $user[$i]["id"] . ". " . $user[$i]["nama"] ?></option>
-                    <?php endfor; ?>
-                </select>
+                <input type="text" id="nama" name="nama" class="form-control" placeholder="User Name" required />
             </div>
             <div class="form-group">
                 <input type="password" id="password" name="password" class="form-control" placeholder="Password" required />
@@ -103,9 +99,9 @@
                 <input type="submit" class="btn btn-primary btn-block" value="Log in" />
             </div>
         </form>
-        <div class="login-footer">
+        <!-- <div class="login-footer">
             <p><a href="#">Forgot Password?</a></p>
-        </div>
+        </div> -->
     </div>
 </body>
 

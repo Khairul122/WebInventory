@@ -31,13 +31,14 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'barangMasuk::index');
 $routes->get('/', 'dataPemesanan::index');
 $routes->get('/antrian/(:any)', 'Antrian::index');
 $routes->get('/laporan/(:any)', 'Laporan::index');
 $routes->get('/jasa/(:any)', 'Jasa::index');
 $routes->get('/user/(:any)', 'User::index');
 $routes->post('/mesin/edit', 'Mesin::edit');
+$routes->post('dataPemesanan/hapus', 'DataPemesanan::hapus');
+
 
 
 

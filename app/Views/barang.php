@@ -4,10 +4,16 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Daftar Barang</h4>
-                <button class="btn btn-success" data-toggle="modal" data-target="#modalTambah">Tambah Data</button>
-                <button class="btn btn-primary" onclick="exportPdf()">Export PDF</button>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h4 class="card-title">Daftar Barang</h4>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#modalTambah">Tambah Data</button>
+                    <button class="btn btn-primary" onclick="exportPdf()">Export PDF</button>
+                </div>
+                <div class="bg-white text-center p-3" style="border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                    <h6 class="text-muted">Stok</h6>
+                    <h4 id="jumlahStok">0</h4>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -16,13 +22,9 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama Barang</th>
-                                <th>Stok</th>
-                                <th>Mesin 1</th>
-                                <th>Jumlah 1</th>
-                                <th>Mesin 2</th>
-                                <th>Jumlah 2</th>
-                                <th>Mesin 3</th>
-                                <th>Jumlah 3</th>
+                                <th>Waktu</th>
+                                <th>Nama Mesin</th>
+                                <th>Qty</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -52,39 +54,21 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="nama_mesin1" class="col-sm-2 col-form-label">Mesin 1</label>
+                        <label for="waktu" class="col-sm-2 col-form-label">Waktu</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="nama_mesin1" name="nama_mesin1"></select>
+                            <input type="text" class="form-control datetimepicker-input" id="waktu" name="waktu" data-toggle="datetimepicker" data-target="#waktu" />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="jumlah1" class="col-sm-2 col-form-label">Jumlah 1</label>
+                        <label for="nama_mesin" class="col-sm-2 col-form-label">Nama Mesin</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="jumlah1" name="jumlah1">
+                            <select class="form-control" id="nama_mesin" name="nama_mesin"></select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="nama_mesin2" class="col-sm-2 col-form-label">Mesin 2</label>
+                        <label for="qty" class="col-sm-2 col-form-label">Qty</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="nama_mesin2" name="nama_mesin2"></select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="jumlah2" class="col-sm-2 col-form-label">Jumlah 2</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="jumlah2" name="jumlah2">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="nama_mesin3" class="col-sm-2 col-form-label">Mesin 3</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="nama_mesin3" name="nama_mesin3"></select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="jumlah3" class="col-sm-2 col-form-label">Jumlah 3</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="jumlah3" name="jumlah3">
+                            <input type="number" class="form-control" id="qty" name="qty">
                         </div>
                     </div>
                 </form>
@@ -116,39 +100,21 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="edit_nama_mesin1" class="col-sm-2 col-form-label">Mesin 1</label>
+                        <label for="edit_waktu" class="col-sm-2 col-form-label">Waktu</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="edit_nama_mesin1" name="nama_mesin1"></select>
+                            <input type="text" class="form-control datetimepicker-input" id="edit_waktu" name="waktu" data-toggle="datetimepicker" data-target="#edit_waktu" />
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="edit_jumlah1" class="col-sm-2 col-form-label">Jumlah 1</label>
+                        <label for="edit_nama_mesin" class="col-sm-2 col-form-label">Nama Mesin</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" id="edit_jumlah1" name="jumlah1">
+                            <select class="form-control" id="edit_nama_mesin" name="nama_mesin"></select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="edit_nama_mesin2" class="col-sm-2 col-form-label">Mesin 2</label>
+                        <label for="edit_qty" class="col-sm-2 col-form-label">Qty</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="edit_nama_mesin2" name="nama_mesin2"></select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="edit_jumlah2" class="col-sm-2 col-form-label">Jumlah 2</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="edit_jumlah2" name="jumlah2">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="edit_nama_mesin3" class="col-sm-2 col-form-label">Mesin 3</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="edit_nama_mesin3" name="nama_mesin3"></select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="edit_jumlah3" class="col-sm-2 col-form-label">Jumlah 3</label>
-                        <div class="col-sm-10">
-                            <input type="number" class="form-control" id="edit_jumlah3" name="jumlah3">
+                            <input type="number" class="form-control" id="edit_qty" name="qty">
                         </div>
                     </div>
                 </form>
@@ -181,10 +147,49 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/id.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
 <script>
     $(document).ready(function() {
         muatData();
         muatMesin();
+        updateJumlahStok();
+
+        $('#waktu').datetimepicker({
+            locale: 'id',
+            format: 'YYYY-MM-DD HH:mm:ss',
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-check',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            }
+        });
+
+        $('#edit_waktu').datetimepicker({
+            locale: 'id',
+            format: 'YYYY-MM-DD HH:mm:ss',
+            icons: {
+                time: 'fa fa-clock-o',
+                date: 'fa fa-calendar',
+                up: 'fa fa-chevron-up',
+                down: 'fa fa-chevron-down',
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-check',
+                clear: 'fa fa-trash',
+                close: 'fa fa-times'
+            }
+        });
     });
 
     function muatData() {
@@ -195,12 +200,14 @@
             success: function(data) {
                 var tabel = '';
                 for (let i = 0; i < data.length; i++) {
-                    tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + data[i].stok + "</td><td>" + data[i].nama_mesin1 + "</td><td>" + data[i].jumlah1 + "</td><td>" + data[i].nama_mesin2 + "</td><td>" + data[i].jumlah2 + "</td><td>" + data[i].nama_mesin3 + "</td><td>" + data[i].jumlah3 + "</td><td><a href='#' id='edit" + data[i].id + "' onclick='tryEdit(" + data[i].id + ", \"" + data[i].namaBarang + "\", \"" + data[i].nama_mesin1 + "\", \"" + data[i].jumlah1 + "\", \"" + data[i].nama_mesin2 + "\", \"" + data[i].jumlah2 + "\", \"" + data[i].nama_mesin3 + "\", \"" + data[i].jumlah3 + "\")' ><i class='fa fa-edit'></i></a> <a href='#' id='hapus" + data[i].id + "' onclick='tryHapus(" + data[i].id + ", \"" + data[i].namaBarang + "\")' ><i class='fa fa-trash'></i></a></td></tr>";
+                    var waktu = moment(data[i].waktu).format('D MMMM YYYY, HH.mm');
+                    tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + waktu + "</td><td>" + data[i].nama_mesin + "</td><td>" + data[i].qty + "</td><td><a href='#' id='edit" + data[i].id + "' onclick='tryEdit(" + data[i].id + ", \"" + data[i].namaBarang + "\", \"" + data[i].waktu + "\", \"" + data[i].nama_mesin + "\", \"" + data[i].qty + "\")' ><i class='fa fa-edit'></i></a> <a href='#' id='hapus" + data[i].id + "' onclick='tryHapus(" + data[i].id + ", \"" + data[i].namaBarang + "\")' ><i class='fa fa-trash'></i></a></td></tr>";
                 }
                 if (!tabel) {
-                    tabel = '<td class="text-center" colspan="10">Data Masih kosong :)</td>';
+                    tabel = '<td class="text-center" colspan="6">Data Masih kosong :)</td>';
                 }
                 $("#tabelBarang tbody").html(tabel);
+                updateJumlahStok();
             }
         });
     }
@@ -215,12 +222,8 @@
                 for (let i = 0; i < data.length; i++) {
                     options += '<option value="' + data[i].nama_mesin + '">' + data[i].nama_mesin + '</option>';
                 }
-                $("#nama_mesin1").html(options);
-                $("#nama_mesin2").html(options);
-                $("#nama_mesin3").html(options);
-                $("#edit_nama_mesin1").html(options);
-                $("#edit_nama_mesin2").html(options);
-                $("#edit_nama_mesin3").html(options);
+                $("#nama_mesin").html(options);
+                $("#edit_nama_mesin").html(options);
             }
         });
     }
@@ -228,34 +231,24 @@
     function tambah() {
         if ($("#namaBarang").val() == "") {
             $("#namaBarang").focus();
-        } else if ($("#nama_mesin1").val() == "") {
-            $("#nama_mesin1").focus();
-        } else if ($("#jumlah1").val() == "") {
-            $("#jumlah1").focus();
-        } else if ($("#nama_mesin2").val() == "") {
-            $("#nama_mesin2").focus();
-        } else if ($("#jumlah2").val() == "") {
-            $("#jumlah2").focus();
-        } else if ($("#nama_mesin3").val() == "") {
-            $("#nama_mesin3").focus();
-        } else if ($("#jumlah3").val() == "") {
-            $("#jumlah3").focus();
+        } else if ($("#waktu").val() == "") {
+            $("#waktu").focus();
+        } else if ($("#nama_mesin").val() == "") {
+            $("#nama_mesin").focus();
+        } else if ($("#qty").val() == "") {
+            $("#qty").focus();
         } else {
-            var stok = parseInt($("#jumlah1").val()) + parseInt($("#jumlah2").val()) + parseInt($("#jumlah3").val());
             $.ajax({
                 type: 'POST',
-                data: 'namaBarang=' + $("#namaBarang").val() + '&stok=' + stok + '&nama_mesin1=' + $("#nama_mesin1").val() + '&jumlah1=' + $("#jumlah1").val() + '&nama_mesin2=' + $("#nama_mesin2").val() + '&jumlah2=' + $("#jumlah2").val() + '&nama_mesin3=' + $("#nama_mesin3").val() + '&jumlah3=' + $("#jumlah3").val(),
+                data: 'namaBarang=' + $("#namaBarang").val() + '&waktu=' + $("#waktu").val() + '&nama_mesin=' + $("#nama_mesin").val() + '&qty=' + $("#qty").val(),
                 url: '<?= base_url() ?>/barang/tambah',
                 dataType: 'json',
                 success: function(data) {
                     alert('Data berhasil ditambahkan');
                     $("#namaBarang").val("");
-                    $("#nama_mesin1").val("");
-                    $("#jumlah1").val("");
-                    $("#nama_mesin2").val("");
-                    $("#jumlah2").val("");
-                    $("#nama_mesin3").val("");
-                    $("#jumlah3").val("");
+                    $("#waktu").val("");
+                    $("#nama_mesin").val("");
+                    $("#qty").val("");
                     $("#modalTambah").modal('hide');
                     muatData();
                 }
@@ -263,23 +256,19 @@
         }
     }
 
-    function tryEdit(id, namaBarang, nama_mesin1, jumlah1, nama_mesin2, jumlah2, nama_mesin3, jumlah3) {
+    function tryEdit(id, namaBarang, waktu, nama_mesin, qty) {
         $("#idEdit").val(id);
         $("#edit_namaBarang").val(namaBarang);
-        $("#edit_nama_mesin1").val(nama_mesin1);
-        $("#edit_jumlah1").val(jumlah1);
-        $("#edit_nama_mesin2").val(nama_mesin2);
-        $("#edit_jumlah2").val(jumlah2);
-        $("#edit_nama_mesin3").val(nama_mesin3);
-        $("#edit_jumlah3").val(jumlah3);
+        $("#edit_waktu").val(waktu);
+        $("#edit_nama_mesin").val(nama_mesin);
+        $("#edit_qty").val(qty);
         $("#modalEdit").modal('show');
     }
 
     function simpanEdit() {
-        var stok = parseInt($("#edit_jumlah1").val()) + parseInt($("#edit_jumlah2").val()) + parseInt($("#edit_jumlah3").val());
         $.ajax({
             type: 'POST',
-            data: 'id=' + $("#idEdit").val() + '&namaBarang=' + $("#edit_namaBarang").val() + '&stok=' + stok + '&nama_mesin1=' + $("#edit_nama_mesin1").val() + '&jumlah1=' + $("#edit_jumlah1").val() + '&nama_mesin2=' + $("#edit_nama_mesin2").val() + '&jumlah2=' + $("#edit_jumlah2").val() + '&nama_mesin3=' + $("#edit_nama_mesin3").val() + '&jumlah3=' + $("#edit_jumlah3").val(),
+            data: 'id=' + $("#idEdit").val() + '&namaBarang=' + $("#edit_namaBarang").val() + '&waktu=' + $("#edit_waktu").val() + '&nama_mesin=' + $("#edit_nama_mesin").val() + '&qty=' + $("#edit_qty").val(),
             url: '<?= base_url() ?>/barang/edit',
             dataType: 'json',
             success: function(data) {
@@ -317,13 +306,32 @@
         });
     }
 
+    function updateJumlahStok() {
+        $.ajax({
+            url: '<?= base_url() ?>/barang/muatData',
+            method: 'post',
+            dataType: 'json',
+            success: function(data) {
+                var totalStok = 0;
+                for (let i = 0; i < data.length; i++) {
+                    totalStok += parseInt(data[i].stok);
+                }
+                $("#jumlahStok").text(totalStok);
+            }
+        });
+    }
+
     function previewPdf() {
-        const { jsPDF } = window.jspdf;
+        const {
+            jsPDF
+        } = window.jspdf;
         const doc = new jsPDF();
         doc.text("Laporan Data Barang", 14, 10);
-        doc.line(14, 12, 196, 12); 
+        doc.line(14, 12, 196, 12);
         doc.autoTable({
-            head: [['No', 'Nama Barang', 'Stok', 'Mesin 1', 'Jumlah 1', 'Mesin 2', 'Jumlah 2', 'Mesin 3', 'Jumlah 3']],
+            head: [
+                ['No', 'Nama Barang', 'Waktu', 'Nama Mesin', 'Qty']
+            ],
             body: extractTableData(),
             startY: 15,
             theme: 'grid'
@@ -332,12 +340,16 @@
     }
 
     function exportPdf() {
-        const { jsPDF } = window.jspdf;
+        const {
+            jsPDF
+        } = window.jspdf;
         const doc = new jsPDF();
         doc.text("Laporan Data Barang", 14, 10);
-        doc.line(14, 12, 196, 12); 
+        doc.line(14, 12, 196, 12);
         doc.autoTable({
-            head: [['No', 'Nama Barang', 'Stok', 'Mesin 1', 'Jumlah 1', 'Mesin 2', 'Jumlah 2', 'Mesin 3', 'Jumlah 3']],
+            head: [
+                ['No', 'Nama Barang', 'Waktu', 'Nama Mesin', 'Qty']
+            ],
             body: extractTableData(),
             startY: 15,
             theme: 'grid'
@@ -350,7 +362,7 @@
         $("#tabelBarang tbody tr").each(function(index, tr) {
             var row = [];
             $(tr).find('td').each(function(index, td) {
-                if (index < 9) { 
+                if (index < 6) {
                     row.push($(td).text());
                 }
             });

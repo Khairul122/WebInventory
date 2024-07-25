@@ -26,3 +26,441 @@ CRITICAL - 2024-07-21 00:01:59 --> Table 'gudangku.barangmasuk' doesn't exist
 #9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
 #11 {main}
+ERROR - 2024-07-21 08:43:50 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:43:50 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:43:52 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:43:52 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:02 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:04 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:04 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:04 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:04 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 08:44:05 --> Unknown column 'nama_barang' in 'field list'
+CRITICAL - 2024-07-21 08:44:05 --> Unknown column 'nama_barang' in 'field list'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1759): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\gudangku\system\Model.php(620): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\gudangku\system\BaseModel.php(658): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\gudangku\app\Controllers\Barang.php(43): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->tambah()
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#11 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 {main}
+ERROR - 2024-07-21 10:06:41 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:06:41 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 10:09:01 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:09:01 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 10:09:35 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:09:35 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 10:09:46 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:09:46 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 10:14:51 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:14:51 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 10:17:19 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+CRITICAL - 2024-07-21 10:17:19 --> Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'gudangku.barang.tanggal' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `namaBar...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `namaBar...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `namaBar...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT `namaBar...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Models\BarangModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\app\Controllers\Barang.php(26): App\Models\BarangModel->getStokByNamaBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Barang->muatData()
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+#10 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+ERROR - 2024-07-21 11:24:44 --> There is no data to update.
+ERROR - 2024-07-21 11:25:30 --> There is no data to update.
+ERROR - 2024-07-21 11:26:02 --> There is no data to update.
+ERROR - 2024-07-21 11:29:00 --> There is no data to update.
+CRITICAL - 2024-07-21 11:29:36 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-07-21 11:29:37 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-07-21 11:29:37 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2024-07-21 11:47:19 --> Undefined variable: totalTime
+#0 C:\laragon\www\gudangku\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 40, Array)
+#1 C:\laragon\www\gudangku\system\Debug\Toolbar.php(497): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\gudangku\system\Debug\Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\laragon\www\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\laragon\www\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\laragon\www\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-07-21 11:50:07 --> Undefined variable: totalTime
+#0 C:\laragon\www\gudangku\system\Debug\Toolbar\Views\toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\laragon\\www\\...', 40, Array)
+#1 C:\laragon\www\gudangku\system\Debug\Toolbar.php(497): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\gudangku\system\Debug\Toolbar.php(460): CodeIgniter\Debug\Toolbar->format(Array, 'html')
+#3 C:\laragon\www\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 C:\laragon\www\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 C:\laragon\www\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#6 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-07-21 11:59:09 --> file_get_contents(): read of 8192 bytes failed with errno=13 Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'file_get_conten...', 'C:\\laragon\\www\\...', 460, Array)
+#1 C:\laragon\www\gudangku\system\Debug\Toolbar.php(460): file_get_contents('C:\\laragon\\www\\...')
+#2 C:\laragon\www\gudangku\app\Config\Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#3 C:\laragon\www\gudangku\system\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#4 C:\laragon\www\gudangku\system\CodeIgniter.php(300): CodeIgniter\Events\Events::trigger('pre_system')
+#5 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2024-07-21 12:17:54 --> Unknown column 'hapus' in 'where clause'
+CRITICAL - 2024-07-21 12:17:54 --> Unknown column 'hapus' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 12:18:38 --> Unknown column 'hapus' in 'where clause'
+CRITICAL - 2024-07-21 12:18:38 --> Unknown column 'hapus' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 12:18:39 --> Unknown column 'hapus' in 'where clause'
+CRITICAL - 2024-07-21 12:18:39 --> Unknown column 'hapus' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 12:18:39 --> Unknown column 'hapus' in 'where clause'
+CRITICAL - 2024-07-21 12:18:39 --> Unknown column 'hapus' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(25): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-07-21 13:18:14 --> View themes, no current section.
+#0 C:\laragon\www\gudangku\app\Views\dataPemesanan.php(478): CodeIgniter\View\View->endSection()
+#1 C:\laragon\www\gudangku\system\View\View.php(214): include('C:\\laragon\\www\\...')
+#2 C:\laragon\www\gudangku\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\laragon\www\gudangku\system\Common.php(1097): CodeIgniter\View\View->render('dataPemesanan', Array, true)
+#4 C:\laragon\www\gudangku\app\Controllers\DataPemesanan.php(26): view('dataPemesanan', Array)
+#5 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\DataPemesanan->index()
+#6 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataPemesanan))
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2024-07-21 14:02:05 --> Unknown column 'tgl_transaksi' in 'field list'
+ERROR - 2024-07-21 14:04:03 --> Unknown column 'tgl_transaksi' in 'field list'
+CRITICAL - 2024-07-21 14:57:57 --> Call to undefined method CodeIgniter\Router\Router::extend()
+#0 C:\laragon\www\gudangku\system\Router\Router.php(519): include_once()
+#1 C:\laragon\www\gudangku\system\Router\Router.php(176): CodeIgniter\Router\Router->autoRoute('dataPemesanan')
+#2 C:\laragon\www\gudangku\system\CodeIgniter.php(718): CodeIgniter\Router\Router->handle('dataPemesanan')
+#3 C:\laragon\www\gudangku\system\CodeIgniter.php(359): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#4 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2024-07-21 15:13:18 --> Unknown column 'tgl_transaksi' in 'order clause'
+CRITICAL - 2024-07-21 15:13:18 --> Unknown column 'tgl_transaksi' in 'order clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Beranda.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Beranda->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:18:38 --> Unknown column 'tgl_transaksi' in 'order clause'
+CRITICAL - 2024-07-21 15:18:38 --> Unknown column 'tgl_transaksi' in 'order clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Beranda.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Beranda->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:21:52 --> Unknown column 'tgl_transaksi' in 'order clause'
+CRITICAL - 2024-07-21 15:21:52 --> Unknown column 'tgl_transaksi' in 'order clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Beranda.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Beranda->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:21:56 --> Unknown column 'tgl_transaksi' in 'order clause'
+CRITICAL - 2024-07-21 15:21:56 --> Unknown column 'tgl_transaksi' in 'order clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Beranda.php(26): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Beranda->index()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Beranda))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:38:21 --> Unknown column 'tgl_transaksi' in 'where clause'
+CRITICAL - 2024-07-21 15:38:21 --> Unknown column 'tgl_transaksi' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Laporan.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:38:22 --> Unknown column 'tgl_transaksi' in 'where clause'
+CRITICAL - 2024-07-21 15:38:22 --> Unknown column 'tgl_transaksi' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Laporan.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:38:35 --> Unknown column 'tgl_transaksi' in 'where clause'
+CRITICAL - 2024-07-21 15:38:35 --> Unknown column 'tgl_transaksi' in 'where clause'
+#0 C:\laragon\www\gudangku\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\gudangku\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\gudangku\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\gudangku\system\Database\BaseBuilder.php(1443): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\gudangku\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\gudangku\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\gudangku\app\Controllers\Laporan.php(39): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\gudangku\system\CodeIgniter.php(824): App\Controllers\Laporan->dataBarang()
+#8 C:\laragon\www\gudangku\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\laragon\www\gudangku\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\gudangku\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+ERROR - 2024-07-21 15:39:44 --> Unknown column 'tgl_transaksi' in 'where clause'
+ERROR - 2024-07-21 15:39:58 --> Unknown column 'tgl_transaksi' in 'where clause'
+ERROR - 2024-07-21 15:40:14 --> Unknown column 'tgl_transaksi' in 'where clause'
+ERROR - 2024-07-21 15:41:07 --> Unknown column 'tgl_transaksi' in 'where clause'
+ERROR - 2024-07-21 15:41:08 --> Unknown column 'tgl_transaksi' in 'where clause'
+ERROR - 2024-07-21 15:41:11 --> Unknown column 'tgl_transaksi' in 'where clause'

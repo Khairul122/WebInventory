@@ -27,8 +27,8 @@ class Login extends BaseController
         $usersModel = new UserModel();
         $username = $this->request->getPost('nama');
         $password = $this->request->getPost('password');
-        $user = $usersModel->where('id', $username)->first();
-
+        $user = $usersModel->where('nama', $username)->first(); // Ubah dari 'id' menjadi 'nama'
+    
         if (empty($user)) {
             session()->setFlashdata('message', '<span class="badge badge-danger">Username Salah :(</span>');
             return redirect()->to(base_url() . "/login");
@@ -41,6 +41,7 @@ class Login extends BaseController
             return redirect()->to(base_url() . "/login");
         }
     }
+    
     public function logout()
     {
         session()->remove('nama');
