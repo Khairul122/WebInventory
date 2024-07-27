@@ -94,8 +94,13 @@ class Barang extends BaseController
         if ($id) {
             $barang = $this->barangModel->find($id);
             if ($barang) {
-                $totalQty = $this->barangModel->selectSum('qty')->get()->getRow()->qty;
-                $this->barangModel->update($id, ['stok' => $totalQty]);
+                // Mendapatkan stok terakhir yang tersimpan di database
+                $lastBarang = $this->barangModel->orderBy('id', 'DESC')->where('id <', $id)->first();
+                $lastStok = $lastBarang ? $lastBarang['stok'] : 0;
+
+                // Menambahkan qty baru ke stok terakhir
+                $newStok = $lastStok + $barang['qty'];
+                $this->barangModel->update($id, ['stok' => $newStok]);
             }
         }
     }

@@ -307,19 +307,21 @@
     }
 
     function updateJumlahStok() {
-        $.ajax({
-            url: '<?= base_url() ?>/barang/muatData',
-            method: 'post',
-            dataType: 'json',
-            success: function(data) {
-                var totalStok = 0;
-                for (let i = 0; i < data.length; i++) {
-                    totalStok += parseInt(data[i].stok);
-                }
-                $("#jumlahStok").text(totalStok);
+    $.ajax({
+        url: '<?= base_url() ?>/barang/muatData',
+        method: 'post',
+        dataType: 'json',
+        success: function(data) {
+            if (data.length > 0) {
+                var stokTerakhir = data[data.length - 1].stok;
+                $("#jumlahStok").text(stokTerakhir);
+            } else {
+                $("#jumlahStok").text('0'); // Jika tidak ada data, tampilkan 0
             }
-        });
-    }
+        }
+    });
+}
+
 
     function previewPdf() {
         const {
