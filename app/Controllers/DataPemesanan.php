@@ -45,7 +45,6 @@ class DataPemesanan extends BaseController
             ->first();
         echo json_encode($data);
     }
-    
 
     public function tambah()
     {
@@ -62,27 +61,26 @@ class DataPemesanan extends BaseController
             "status" => $this->request->getPost("status"), // Mengambil status dari form
             "id_barang" => $this->request->getPost("id_barang")
         ];
-    
+
         try {
             $this->DataPemesananModel->save($data);
-    
+
             if ($data['status'] == 'jalan' || $data['status'] == 'acc') {
                 $this->updateStokBarang($data['id_barang'], -$data['qty']);
             }
-    
+
             return $this->response->setJSON(['status' => 'success']);
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
-    
 
     public function update()
     {
         $id = $this->request->getPost('id_transaksi');
-    
+
         $transaksiSebelumnya = $this->DataPemesananModel->find($id);
-    
+
         $data = [
             "tgl_transaksi" => $this->request->getPost("tgl_transaksi"),
             "nama_costumer" => $this->request->getPost("nama_costumer"),
@@ -96,27 +94,29 @@ class DataPemesanan extends BaseController
             "status" => $this->request->getPost("status"),
             "id_barang" => $this->request->getPost("id_barang")
         ];
-    
+
         // Tambahkan nama_admin jika status berubah menjadi acc
         if ($data['status'] == 'acc') {
             $data['nama_admin'] = session()->get('nama');
         }
-    
+
         try {
             $this->DataPemesananModel->update($id, $data);
-    
-            if ($transaksiSebelumnya['status'] == 'jalan' && $data['status'] != 'jalan') {
+
+            // Jika status transaksi sebelumnya adalah 'jalan' atau 'acc' dan status baru adalah 'batal', kembalikan stok
+            if (($transaksiSebelumnya['status'] == 'jalan' || $transaksiSebelumnya['status'] == 'acc') && $data['status'] == 'batal') {
                 $this->updateStokBarang($data['id_barang'], $transaksiSebelumnya['qty']);
-            } elseif ($transaksiSebelumnya['status'] != 'jalan' && $data['status'] == 'jalan' || $data['status'] == 'acc') {
+            }
+            // Jika status transaksi sebelumnya bukan 'jalan' atau 'acc' dan status baru adalah 'jalan' atau 'acc', kurangi stok
+            elseif ($transaksiSebelumnya['status'] != 'jalan' && $transaksiSebelumnya['status'] != 'acc' && ($data['status'] == 'jalan' || $data['status'] == 'acc')) {
                 $this->updateStokBarang($data['id_barang'], -$data['qty']);
             }
-    
+
             return $this->response->setJSON(['status' => 'success']);
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
-    
 
     private function updateStokBarang($id_barang, $qty)
     {
@@ -132,6 +132,7 @@ class DataPemesanan extends BaseController
             $this->BarangModel->update($id_barang, ['stok' => $stokBaru]);
         }
     }
+
     public function hapus()
     {
         $id = $this->request->getPost('id_transaksi');

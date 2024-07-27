@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\BarangModel;
+use App\Models\DataPemesananModel;
 
 class Laporan extends BaseController
 {
     protected $barangModel;
+    protected $dataPemesananModel;
 
     public function __construct()
     {
         $this->barangModel = new BarangModel();
+        $this->dataPemesananModel = new DataPemesananModel();
     }
 
     public function index()
@@ -26,7 +29,7 @@ class Laporan extends BaseController
         $tanggalMulai = $this->request->getPost('tanggalMulai') . " 00:00:00";
         $tanggalSelesai = $this->request->getPost('tanggalSelesai') . " 23:59:59";
 
-        $transaksi = $this->barangModel->where(['tgl_transaksi >=' => $tanggalMulai, 'tgl_transaksi <=' => $tanggalSelesai])->findAll();
+        $transaksi = $this->dataPemesananModel->where(['tgl_transaksi >=' => $tanggalMulai, 'tgl_transaksi <=' => $tanggalSelesai])->findAll();
 
         echo json_encode($transaksi);
     }
