@@ -59,26 +59,23 @@ class DataPemesanan extends BaseController
             "no_hp" => $this->request->getPost("no_hp"),
             "metode_bayar" => $this->request->getPost("metode_bayar"),
             "shift" => $this->request->getPost("shift"),
-            "status" => $this->request->getPost("status"),
+            "status" => $this->request->getPost("status"), // Mengambil status dari form
             "id_barang" => $this->request->getPost("id_barang")
         ];
-
-        if (session()->get('rule') == 0) {
-            $data['status'] = 'acc';
-        }
-
+    
         try {
             $this->DataPemesananModel->save($data);
-
+    
             if ($data['status'] == 'jalan' || $data['status'] == 'acc') {
                 $this->updateStokBarang($data['id_barang'], -$data['qty']);
             }
-
+    
             return $this->response->setJSON(['status' => 'success']);
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }
+    
 
     public function update()
     {

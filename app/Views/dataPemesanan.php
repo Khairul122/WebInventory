@@ -367,143 +367,148 @@
     }
 
     function preview(id) {
-        $.ajax({
-            url: `<?= base_url() ?>/dataPemesanan/getById`,
-            method: 'post',
-            data: {
-                id_transaksi: id
-            },
-            dataType: 'json',
-            success: function(data) {
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
+    $.ajax({
+        url: `<?= base_url() ?>/dataPemesanan/getById`,
+        method: 'post',
+        data: {
+            id_transaksi: id
+        },
+        dataType: 'json',
+        success: function(data) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
-                const img = new Image();
-                img.src = '<?= base_url() ?>/public/images/logo-ads.jpg';
-                img.onload = function() {
-                    doc.addImage(img, 'JPEG', 20, 10, 20, 20);
-                    doc.setFont("helvetica", "bold");
-                    doc.setFontSize(16);
-                    doc.text("PT. ANDALAS DOLOMIT SEJAHTERA", 105, 40, null, null, 'center');
+            const img = new Image();
+            img.src = '<?= base_url() ?>/public/images/logo-ads.jpg';
+            img.onload = function() {
+                doc.addImage(img, 'JPEG', 20, 10, 20, 20);
+                doc.setFont("helvetica", "bold");
+                doc.setFontSize(16);
+                doc.text("PT. ANDALAS DOLOMIT SEJAHTERA", 105, 40, null, null, 'center');
 
-                    doc.setFont("helvetica", "normal");
-                    doc.setFontSize(10);
-                    const lineHeight = 5;
-                    const address = [
-                        "Jln Rambutan Komplek Ruko Royal Mansion Blok B No.2 RT 006, RW 001",
-                        "Kel. Sidomulyo Timur",
-                        "Kec. Marpoyan Damai Kota Pekanbaru, Riau (28125)"
-                    ];
-                    let startY = 50;
-                    address.forEach((line) => {
-                        doc.text(line, 20, startY);
-                        startY += lineHeight;
-                    });
+                doc.setFont("helvetica", "normal");
+                doc.setFontSize(10);
+                const lineHeight = 5;
+                const address = [
+                    "Jln Rambutan Komplek Ruko Royal Mansion Blok B No.2 RT 006, RW 001",
+                    "Kel. Sidomulyo Timur",
+                    "Kec. Marpoyan Damai Kota Pekanbaru, Riau (28125)"
+                ];
+                let startY = 50;
+                address.forEach((line) => {
+                    doc.text(line, 20, startY);
+                    startY += lineHeight;
+                });
 
-                    doc.text("No. Sj : 0", 160, 50);
-                    doc.text("No. PO : 0", 160, 60);
+                doc.text("No. Sj : 0", 160, 50);
+                doc.text("No. PO : 0", 160, 60);
 
-                    doc.setFontSize(12);
-                    doc.setFont("helvetica", "bold");
-                    doc.text("SURAT PERMINTAAN PENGELUARAN BARANG", 105, 80, null, null, 'center');
-                    doc.setFont("helvetica", "normal");
+                doc.setFontSize(12);
+                doc.setFont("helvetica", "bold");
+                doc.text("SURAT PERMINTAAN PENGELUARAN BARANG", 105, 80, null, null, 'center');
+                doc.setFont("helvetica", "normal");
 
-                    doc.autoTable({
-                        startY: 90,
-                        head: [['No', 'Jenis Barang', 'Qty', 'Unit', 'Total Unit', 'Remark']],
-                        body: [['1', data.namaBarang, data.qty, 'KG', data.stok, 'OK']],
-                        theme: 'grid',
-                        styles: {
-                            fontSize: 10,
-                            cellPadding: 1,
-                            halign: 'center',
-                            valign: 'middle',
-                            lineWidth: 0.1,
-                            lineColor: [0, 0, 0]
+                doc.autoTable({
+                    startY: 90,
+                    head: [['No', 'Jenis Barang', 'Qty', 'Unit', 'Total Unit', 'Remark']],
+                    body: [['1', data.namaBarang, data.qty, 'KG', data.stok, 'OK']],
+                    theme: 'grid',
+                    styles: {
+                        fontSize: 10,
+                        cellPadding: 1,
+                        halign: 'center',
+                        valign: 'middle',
+                        lineWidth: 0.1,
+                        lineColor: [0, 0, 0]
+                    },
+                    headStyles: {
+                        fillColor: [255, 255, 255],
+                        textColor: [0, 0, 0],
+                        fontStyle: 'bold',
+                        lineWidth: 0.1,
+                        lineColor: [0, 0, 0]
+                    },
+                    tableLineColor: [0, 0, 0],
+                    tableLineWidth: 0.1,
+                    margin: { left: 20, right: 20 },
+                    tableWidth: 'auto'
+                });
+
+                const now = new Date();
+                const options = {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                };
+                const formattedDate = now.toLocaleDateString('id-ID', options);
+
+                let tableEndY = doc.autoTable.previous.finalY + 10;
+                const leftPadding = 1;
+
+                doc.text("Nama Pembeli", 20 + leftPadding, tableEndY);
+                doc.text(`: ${data.nama_costumer}`, 60 + leftPadding, tableEndY);
+                tableEndY += lineHeight;
+                doc.text("Tujuan", 20 + leftPadding, tableEndY);
+                doc.text(`: ${data.tujuan}`, 60 + leftPadding, tableEndY);
+                tableEndY += lineHeight;
+                doc.text("Angkutan", 20 + leftPadding, tableEndY);
+                doc.text(`: ${data.nama_supir}`, 60 + leftPadding, tableEndY);
+                tableEndY += lineHeight;
+                doc.text("No Polisi", 20 + leftPadding, tableEndY);
+                doc.text(`: ${data.no_mobil}`, 60 + leftPadding, tableEndY);
+                tableEndY += lineHeight;
+                doc.text("No HP Supir", 20 + leftPadding, tableEndY);
+                doc.text(`: ${data.no_hp}`, 60 + leftPadding, tableEndY);
+
+                const signatureData = [
+                    ['Dibuat Oleh', 'Disetujui Oleh'],
+                    [`Nama : ${data.nama_admin || ''}\nTanggal : ${formattedDate}`, `Nama : DIREKTUR\nTanggal : ${formattedDate}`]
+                ];
+
+                doc.autoTable({
+                    startY: tableEndY + 20,
+                    head: [signatureData[0]],
+                    body: [signatureData[1]],
+                    theme: 'grid',
+                    styles: {
+                        fontSize: 10,
+                        cellPadding: {
+                            top: 3,
+                            right: 5,
+                            bottom: 3,
+                            left: 5
                         },
-                        headStyles: {
-                            fillColor: [255, 255, 255],
-                            textColor: [0, 0, 0],
-                            fontStyle: 'bold',
-                            lineWidth: 0.1,
-                            lineColor: [0, 0, 0]
+                        valign: 'top',
+                        lineColor: [0, 0, 0],
+                        lineWidth: 0.1,
+                        minCellHeight: 10,
+                    },
+                    headStyles: {
+                        fontStyle: 'bold',
+                        halign: 'left',
+                        fillColor: [255, 255, 255],
+                        textColor: [0, 0, 0],
+                    },
+                    bodyStyles: {
+                        halign: 'left',
+                        cellPadding: {
+                            top: 5,
+                            right: 5,
+                            bottom: 35,
+                            left: 5
                         },
-                        tableLineColor: [0, 0, 0],
-                        tableLineWidth: 0.1,
-                        margin: { left: 20, right: 20 },
-                        tableWidth: 'auto'
-                    });
+                    },
+                    columnStyles: {
+                        0: { cellWidth: 60, halign: 'left' },
+                        1: { cellWidth: 60, halign: 'left' },
+                    },
+                    margin: { left: 20 },
+                });
 
-                    const now = new Date();
-                    const options = {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    };
-                    const formattedDate = now.toLocaleDateString('id-ID', options);
-
-                    let tableEndY = doc.autoTable.previous.finalY + 10;
-                    const leftPadding = 1;
-
-                    doc.text("Nama Pembeli", 20 + leftPadding, tableEndY);
-                    doc.text(`: ${data.nama_costumer}`, 60 + leftPadding, tableEndY);
-                    tableEndY += lineHeight;
-                    doc.text("Tujuan", 20 + leftPadding, tableEndY);
-                    doc.text(`: ${data.tujuan}`, 60 + leftPadding, tableEndY);
-                    tableEndY += lineHeight;
-                    doc.text("Angkutan", 20 + leftPadding, tableEndY);
-                    doc.text(`: ${data.nama_supir}`, 60 + leftPadding, tableEndY);
-                    tableEndY += lineHeight;
-                    doc.text("No Polisi", 20 + leftPadding, tableEndY);
-                    doc.text(`: ${data.no_mobil}`, 60 + leftPadding, tableEndY);
-                    tableEndY += lineHeight;
-                    doc.text("No HP Supir", 20 + leftPadding, tableEndY);
-                    doc.text(`: ${data.no_hp}`, 60 + leftPadding, tableEndY);
-
-                    const signatureData = [
-                        ['Dibuat Oleh', 'Disetujui Oleh'],
-                        [`Nama : ${data.nama_admin || ''}\nTanggal : ${formattedDate}`, `Nama : DIREKTUR\nTanggal : ${formattedDate}`]
-                    ];
-
-                    doc.autoTable({
-                        startY: tableEndY + 20,
-                        head: [signatureData[0]],
-                        body: [signatureData[1]],
-                        theme: 'grid',
-                        styles: {
-                            fontSize: 10,
-                            cellPadding: {
-                                top: 3,
-                                right: 5,
-                                bottom: 3,
-                                left: 5
-                            },
-                            valign: 'top',
-                            lineColor: [0, 0, 0],
-                            lineWidth: 0.1,
-                            minCellHeight: 10,
-                        },
-                        headStyles: {
-                            fontStyle: 'bold',
-                            halign: 'left',
-                            fillColor: [255, 255, 255],
-                            textColor: [0, 0, 0],
-                        },
-                        bodyStyles: {
-                            halign: 'left',
-                            cellPadding: {
-                                top: 5,
-                                right: 5,
-                                bottom: 35,
-                                left: 5
-                            },
-                        },
-                        columnStyles: {
-                            0: { cellWidth: 60, halign: 'left' },
-                            1: { cellWidth: 60, halign: 'left' },
-                        },
-                        margin: { left: 20 },
-                    });
+                const signatureImg = new Image();
+                signatureImg.src = '<?= base_url() ?>/public/images/ttd.png';
+                signatureImg.onload = function() {
+                    doc.addImage(signatureImg, 'PNG', 100, tableEndY + 35, 50, 50); 
 
                     const pdfBlob = doc.output('blob');
                     const pdfUrl = URL.createObjectURL(pdfBlob);
@@ -511,12 +516,14 @@
                     PDFObject.embed(pdfUrl, "#pdfPreview");
                     $('#modalPreview').modal('show');
                 };
-            },
-            error: function() {
-                alert('Gagal mengambil data, coba lagi.');
-            }
-        });
-    }
+            };
+        },
+        error: function() {
+            alert('Gagal mengambil data, coba lagi.');
+        }
+    });
+}
+
 
     function updateData() {
         var data = $("#formEdit").serialize();
