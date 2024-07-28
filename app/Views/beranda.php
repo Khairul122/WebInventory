@@ -25,7 +25,7 @@ function formatTanggal($tanggal)
 }
 
 usort($dataPemesananPengajuan, function($a, $b) {
-    return $b['id'] - $a['id'];
+    return $b['id_transaksi'] - $a['id_transaksi'];
 });
 ?>
 
