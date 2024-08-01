@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 25, 2024 at 10:44 AM
+-- Generation Time: Aug 01, 2024 at 10:37 PM
 -- Server version: 8.0.30
 -- PHP Version: 7.4.3
 
@@ -42,8 +42,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id`, `namaBarang`, `waktu`, `nama_mesin`, `qty`, `stok`, `hapus`) VALUES
-(23, 'Pupuk ADS', '2024-07-21 23:40:10', 'Mesin 1', 10, 10, 0),
-(25, 'Pupuk ADS', '2024-07-21 23:54:47', 'Mesin 1', 10, 14, 0);
+(29, 'Pupuk ADS', '2024-07-27 15:01:08', 'Mesin 1', 10, 5, 0),
+(41, 'Pupuk ADS', '2024-07-27 15:37:19', 'Mesin 1', 10, 15, 0),
+(42, 'Pupuk ADS', '2024-07-27 16:13:53', 'Mesin 1', 10, 10, 0);
 
 -- --------------------------------------------------------
 
@@ -80,17 +81,21 @@ CREATE TABLE `transaksi` (
   `no_hp` varchar(20) NOT NULL,
   `metode_bayar` enum('cash','credit') NOT NULL,
   `shift` enum('pagi','malam') NOT NULL,
-  `status` enum('pengajuan','antrian','jalan','batal','acc') NOT NULL,
+  `status` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `id_barang` int DEFAULT NULL,
-  `nama_admin` varchar(255) DEFAULT NULL
+  `nama_admin` varchar(255) DEFAULT NULL,
+  `is_checked` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `transaksi`
 --
 
-INSERT INTO `transaksi` (`id_transaksi`, `tgl_transaksi`, `nama_costumer`, `tujuan`, `qty`, `no_mobil`, `nama_supir`, `no_hp`, `metode_bayar`, `shift`, `status`, `id_barang`, `nama_admin`) VALUES
-(7, '2024-07-22 03:29:45', 'Budi', 'Bekasi', 2, 'HIU1', 'Budi1', '082165443677', 'credit', 'malam', 'acc', 25, 'Admin Kantor');
+INSERT INTO `transaksi` (`id_transaksi`, `tgl_transaksi`, `nama_costumer`, `tujuan`, `qty`, `no_mobil`, `nama_supir`, `no_hp`, `metode_bayar`, `shift`, `status`, `id_barang`, `nama_admin`, `is_checked`) VALUES
+(16, '2024-08-02 02:05:04', 'Budi', 'Hendra', 1, 'BA 1010 ACS', 'Hendra', '082165443677', 'cash', 'pagi', 'acc', 42, 'Admin Kantor', 0),
+(17, '2024-08-02 02:09:07', 'Budi', 'Bekasi Barat', 1, 'BA 2020 ACS', 'Hendrawan', '082165443677', 'cash', 'pagi', 'terkirim', 42, NULL, 0),
+(18, '2024-08-02 05:22:46', 'CIka', 'Bekasi', 1, 'BA 3030 ACS', 'Hendra', '082165443677', 'cash', 'pagi', 'pengajuan', 42, NULL, 0),
+(19, '2024-08-02 05:30:58', 'Haris', 'Bekasi', 1, 'BA 1010 ACS', 'Hendra', '082165443677', 'cash', 'pagi', 'on proses', 42, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -151,7 +156,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `mesin`
@@ -163,7 +168,7 @@ ALTER TABLE `mesin`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `user`
