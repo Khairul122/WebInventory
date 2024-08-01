@@ -30,10 +30,11 @@ class DataPemesanan extends BaseController
     public function muatData()
     {
         $dataPemesanan = $this->DataPemesananModel->select('transaksi.*, barang.namaBarang')
-            ->join('barang', 'barang.id = transaksi.id_barang')
-            ->findAll();
+        ->join('barang', 'barang.id = transaksi.id_barang')
+        ->orderBy('transaksi.id_transaksi', 'DESC') // Urutkan berdasarkan kolom 'id' secara descending
+        ->findAll();
 
-        echo json_encode($dataPemesanan);
+    echo json_encode($dataPemesanan);
     }
 
     public function getById()
@@ -59,7 +60,8 @@ class DataPemesanan extends BaseController
             "metode_bayar" => $this->request->getPost("metode_bayar"),
             "shift" => $this->request->getPost("shift"),
             "status" => $this->request->getPost("status"), // Mengambil status dari form
-            "id_barang" => $this->request->getPost("id_barang")
+            "id_barang" => $this->request->getPost("id_barang"),
+            "is_checked" => 0 // Default is_checked to 0
         ];
 
         try {
@@ -138,6 +140,19 @@ class DataPemesanan extends BaseController
         $id = $this->request->getPost('id_transaksi');
         try {
             $this->DataPemesananModel->delete($id);
+            return $this->response->setJSON(['status' => 'success']);
+        } catch (\Exception $e) {
+            return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function updateCheck()
+    {
+        $id = $this->request->getPost('id_transaksi');
+        $is_checked = $this->request->getPost('is_checked');
+
+        try {
+            $this->DataPemesananModel->update($id, ['is_checked' => $is_checked]);
             return $this->response->setJSON(['status' => 'success']);
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 'error', 'message' => $e->getMessage()]);

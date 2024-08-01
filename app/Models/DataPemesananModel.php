@@ -20,7 +20,8 @@ class DataPemesananModel extends Model
         'shift', 
         'status',
         'id_barang',
-        'nama_admin'
+        'nama_admin',
+        'is_checked'
     ];
 
     public function getAllTransaksi()

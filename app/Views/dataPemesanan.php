@@ -18,18 +18,22 @@
                             <th>Nama Customer</th>
                             <th>Tujuan</th>
                             <th>Qty (Kg)</th>
-                            <th>No Mobil</th>
+                            <th>Nopol</th>
                             <th>Nama Supir</th>
                             <th>No HP</th>
                             <th>Metode Bayar</th>
                             <th>Shift</th>
                             <th>Status</th>
                             <th>Aksi</th>
+                            <?php if (session()->get('rule') == 1) : ?>
+                                <th>Cek</th>
+                            <?php endif; ?>
                         </tr>
                     </thead>
                     <tbody id="tabelTransaksi">
                     </tbody>
                 </table>
+
             </div>
         </div>
     </div>
@@ -74,7 +78,7 @@
                         <input type="number" class="form-control" id="qty" name="qty">
                     </div>
                     <div class="form-group">
-                        <label for="no_mobil">No Mobil</label>
+                        <label for="no_mobil">Nopol</label>
                         <input type="text" class="form-control" id="no_mobil" name="no_mobil">
                     </div>
                     <div class="form-group">
@@ -102,12 +106,17 @@
                     <div class="form-group">
                         <label for="status">Status</label>
                         <select class="form-control" id="status" name="status">
-                            <option value="pengajuan">Pengajuan</option>
-                            <option value="antrian">Antrian</option>
-                            <option value="jalan">Jalan</option>
-                            <option value="batal">Batal</option>
+                            <?php if (session()->get('rule') == 0) : ?>
+                                <option value="pengajuan">Pengajuan</option>
+                                <option value="antrian">Antrian</option>
+                                <option value="terkirim">Terkirim</option>
+                                <option value="batal">Batal</option>
+                            <?php endif; ?>
                             <?php if (session()->get('rule') == 1) : ?>
+                                <option value="pengajuan">Pengajuan</option>
+                                <option value="on proses">On Proses</option>
                                 <option value="acc">ACC</option>
+                                <option value="batal">batal</option>
                             <?php endif; ?>
                         </select>
                     </div>
@@ -160,7 +169,7 @@
                         <input type="number" class="form-control" id="edit_qty" name="qty">
                     </div>
                     <div class="form-group">
-                        <label for="edit_no_mobil">No Mobil</label>
+                        <label for="edit_no_mobil">Nopol</label>
                         <input type="text" class="form-control" id="edit_no_mobil" name="no_mobil">
                     </div>
                     <div class="form-group">
@@ -188,12 +197,17 @@
                     <div class="form-group">
                         <label for="edit_status">Status</label>
                         <select class="form-control" id="edit_status" name="status">
-                            <option value="pengajuan">Pengajuan</option>
-                            <option value="antrian">Antrian</option>
-                            <option value="jalan">Jalan</option>
-                            <option value="batal">Batal</option>
+                            <?php if (session()->get('rule') == 0) : ?>
+                                <option value="pengajuan">Pengajuan</option>
+                                <option value="antrian">Antrian</option>
+                                <option value="terkirim">Terkirim</option>
+                                <option value="batal">Batal</option>
+                            <?php endif; ?>
                             <?php if (session()->get('rule') == 1) : ?>
+                                <option value="pengajuan">Pengajuan</option>
+                                <option value="on proses">On Proses</option>
                                 <option value="acc">ACC</option>
+                                <option value="batal">batal</option>
                             <?php endif; ?>
                         </select>
                     </div>
@@ -241,7 +255,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.6/pdfobject.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.21/jspdf.plugin.autotable.min.js"></script>
+<style>
+    .checked-row {
+        background-color: lightblue;
+        color: white;
+    }
 
+    .unchecked-row {
+        background-color: lightyellow;
+        color: black;
+    }
+</style>
 <script>
     $(document).ready(function() {
         $('.datetimepicker').datetimepicker({
@@ -255,7 +279,7 @@
     var sessionRule = <?= session()->get('rule') ?>;
 
     function muatData() {
-        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...')
+        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
         $.ajax({
             url: '<?= base_url() ?>/dataPemesanan/muatData',
             method: 'post',
@@ -264,16 +288,25 @@
                 var tabel = '';
                 for (let i = 0; i < data.length; i++) {
                     var formattedDateTime = formatTanggal(data[i].tgl_transaksi);
-                    tabel += "<tr><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDateTime + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td>";
-                    tabel += "<a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> ";
-                    tabel += "<a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a> ";
-                    if (sessionRule == 0 && data[i].status == 'acc') {
-                        tabel += "<a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-print'></i></a> ";
+                    var rowClass = data[i].is_checked == 1 ? 'checked-row' : 'unchecked-row';
+                    tabel += "<tr class='" + rowClass + "'><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDateTime + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td>";
+
+                    if (data[i].is_checked == 0) {
+                        tabel += "<a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> ";
+                        tabel += "<a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a> ";
                     }
+
+                    tabel += "<a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-print'></i></a> ";
+
+                    if (sessionRule == 1) {
+                        var checked = data[i].is_checked == 1 ? 'checked' : '';
+                        tabel += "<td><input type='checkbox' class='form-check-input' data-id='" + data[i].id_transaksi + "' " + checked + " onclick='updateCheck(this)'></td>";
+                    }
+
                     tabel += "</td></tr>";
                 }
                 if (!tabel) {
-                    tabel = '<td class="text-center" colspan="13">Data Masih kosong :)</td>';
+                    tabel = '<td class="text-center" colspan="14">Data Masih kosong :)</td>';
                 }
                 $("#tabelTransaksi").html(tabel);
                 $("#tambah").html('Tambah');
@@ -285,6 +318,7 @@
         });
     }
 
+
     function formatTanggal(dateString) {
         var date = new Date(dateString);
         var options = {
@@ -295,6 +329,32 @@
             minute: '2-digit'
         };
         return date.toLocaleDateString('id-ID', options).replace(' pukul', ',');
+    }
+
+    function updateCheck(checkbox) {
+        var id = $(checkbox).data('id');
+        var isChecked = $(checkbox).is(':checked') ? 1 : 0;
+        var message = isChecked ? 'Success Check' : 'Uncheck';
+
+        $.ajax({
+            url: '<?= base_url() ?>/dataPemesanan/updateCheck',
+            method: 'post',
+            data: {
+                id_transaksi: id,
+                is_checked: isChecked
+            },
+            success: function(response) {
+                if (response.status == 'success') {
+                    alert(message);
+                    muatData(); // Refresh data setelah update check
+                } else {
+                    alert('Gagal memperbarui status check.');
+                }
+            },
+            error: function() {
+                alert('Terjadi kesalahan saat memperbarui status check.');
+            }
+        });
     }
 
     function tambah() {

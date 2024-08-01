@@ -33,23 +33,23 @@ usort($dataPemesananPengajuan, function($a, $b) {
     <div class="col-md-3">
         <div class="card text-white bg-info mb-3">
             <div class="card-body">
-                <h5 class="card-title">Jumlah Pemesanan</h5>
-                <h3 class="card-text"><?= $jumlahPemesanan ?></h3>
+                <h5 class="card-title">Jumlah Data Pengajuan</h5>
+                <h3 class="card-text"><?= $jumlahPemesananPengajuan ?></h3>
             </div>
         </div>
     </div>
     <div class="col-md-3">
         <div class="card text-white bg-success mb-3">
             <div class="card-body">
-                <h5 class="card-title">Jumlah Barang</h5>
-                <h3 class="card-text"><?= $jumlahBarang ?></h3>
+                <h5 class="card-title">Jumlah Data On Proses</h5>
+                <h3 class="card-text"><?= $jumlahPemesananOnProses ?></h3>
             </div>
         </div>
     </div>
     <div class="col-md-3">
         <div class="card text-white bg-warning mb-3">
             <div class="card-body">
-                <h5 class="card-title">Jumlah Pemesanan ACC</h5>
+                <h5 class="card-title">Jumlah Data ACC</h5>
                 <h3 class="card-text"><?= $jumlahPemesananAcc ?></h3>
             </div>
         </div>
@@ -57,8 +57,8 @@ usort($dataPemesananPengajuan, function($a, $b) {
     <div class="col-md-3">
         <div class="card text-white bg-danger mb-3">
             <div class="card-body">
-                <h5 class="card-title">Jumlah Pemesanan Pengajuan</h5>
-                <h3 class="card-text"><?= $jumlahPemesananPengajuan ?></h3>
+                <h5 class="card-title">Jumlah Data Batal</h5>
+                <h3 class="card-text"><?= $jumlahPemesananBatal ?></h3>
             </div>
         </div>
     </div>
