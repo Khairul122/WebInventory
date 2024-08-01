@@ -6,7 +6,10 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">Daftar Transaksi</h4>
-                <button class="btn btn-info" data-toggle="modal" data-target="#modalTambah">Tambah Transaksi</button>
+                <div class="d-flex justify-content-between mt-2">
+                    <button class="btn btn-info" data-toggle="modal" data-target="#modalTambah">Tambah Transaksi</button>
+                    <input type="text" id="searchInput" class="form-control" placeholder="Cari..." style="width: 400px;">
+                </div>
             </div>
             <div class="card-body" style="overflow-x: auto;">
                 <table class="table">
@@ -33,11 +36,11 @@
                     <tbody id="tabelTransaksi">
                     </tbody>
                 </table>
-
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- Modal Tambah Data -->
 <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-labelledby="modalTambahLabel" aria-hidden="true">
@@ -116,7 +119,7 @@
                                 <option value="pengajuan">Pengajuan</option>
                                 <option value="on proses">On Proses</option>
                                 <option value="acc">ACC</option>
-                                <option value="batal">batal</option>
+                                <option value="batal">Batal</option>
                             <?php endif; ?>
                         </select>
                     </div>
@@ -207,7 +210,7 @@
                                 <option value="pengajuan">Pengajuan</option>
                                 <option value="on proses">On Proses</option>
                                 <option value="acc">ACC</option>
-                                <option value="batal">batal</option>
+                                <option value="batal">Batal</option>
                             <?php endif; ?>
                         </select>
                     </div>
@@ -274,49 +277,59 @@
         });
 
         muatData();
+
+        $("#searchInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#tabelTransaksi tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
     });
 
     var sessionRule = <?= session()->get('rule') ?>;
 
     function muatData() {
-        $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
-        $.ajax({
-            url: '<?= base_url() ?>/dataPemesanan/muatData',
-            method: 'post',
-            dataType: 'json',
-            success: function(data) {
-                var tabel = '';
-                for (let i = 0; i < data.length; i++) {
-                    var formattedDateTime = formatTanggal(data[i].tgl_transaksi);
-                    var rowClass = data[i].is_checked == 1 ? 'checked-row' : 'unchecked-row';
-                    tabel += "<tr class='" + rowClass + "'><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDateTime + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td>";
+    $("#tambah").html('<i class="fa fa-spinner fa-pulse"></i> Memproses...');
+    $.ajax({
+        url: '<?= base_url() ?>/dataPemesanan/muatData',
+        method: 'post',
+        dataType: 'json',
+        success: function(data) {
+            var tabel = '';
+            for (let i = 0; i < data.length; i++) {
+                var formattedDateTime = formatTanggal(data[i].tgl_transaksi);
+                var rowClass = data[i].is_checked == 1 ? 'checked-row' : 'unchecked-row';
+                tabel += "<tr class='" + rowClass + "'><td>" + (i + 1) + "</td><td>" + data[i].namaBarang + "</td><td>" + formattedDateTime + "</td><td>" + data[i].nama_costumer + "</td><td>" + data[i].tujuan + "</td><td>" + data[i].qty + "</td><td>" + data[i].no_mobil + "</td><td>" + data[i].nama_supir + "</td><td>" + data[i].no_hp + "</td><td>" + data[i].metode_bayar + "</td><td>" + data[i].shift + "</td><td>" + data[i].status + "</td><td>";
 
-                    if (data[i].is_checked == 0) {
+                if (data[i].is_checked == 0) {
+                    if (sessionRule != 0) {
                         tabel += "<a href='#' onclick='edit(" + data[i].id_transaksi + ")'><i class='fa fa-edit'></i></a> ";
-                        tabel += "<a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a> ";
                     }
-
+                    tabel += "<a href='#' onclick='hapus(" + data[i].id_transaksi + ")'><i class='fa fa-trash'></i></a> ";
                     tabel += "<a href='#' onclick='preview(" + data[i].id_transaksi + ")'><i class='fa fa-print'></i></a> ";
-
-                    if (sessionRule == 1) {
-                        var checked = data[i].is_checked == 1 ? 'checked' : '';
-                        tabel += "<td><input type='checkbox' class='form-check-input' data-id='" + data[i].id_transaksi + "' " + checked + " onclick='updateCheck(this)'></td>";
-                    }
-
-                    tabel += "</td></tr>";
+                } else {
+                    tabel += "<span class='hidden-actions'></span>"; // Placeholder to maintain table structure
                 }
-                if (!tabel) {
-                    tabel = '<td class="text-center" colspan="14">Data Masih kosong :)</td>';
+
+                if (sessionRule == 1) {
+                    var checked = data[i].is_checked == 1 ? 'checked' : '';
+                    tabel += "<td><input type='checkbox' class='form-check-input' data-id='" + data[i].id_transaksi + "' " + checked + " onclick='updateCheck(this)'></td>";
                 }
-                $("#tabelTransaksi").html(tabel);
-                $("#tambah").html('Tambah');
-            },
-            error: function() {
-                $("#tambah").html('Tambah');
-                alert('Gagal memuat data, coba lagi.');
+
+                tabel += "</td></tr>";
             }
-        });
-    }
+            if (!tabel) {
+                tabel = '<td class="text-center" colspan="14">Data Masih kosong :)</td>';
+            }
+            $("#tabelTransaksi").html(tabel);
+            $("#tambah").html('Tambah');
+        },
+        error: function() {
+            $("#tambah").html('Tambah');
+            alert('Gagal memuat data, coba lagi.');
+        }
+    });
+}
 
 
     function formatTanggal(dateString) {
@@ -405,7 +418,6 @@
             });
         }
     }
-
 
     function edit(id) {
         $.ajax({
@@ -610,7 +622,6 @@
             }
         });
     }
-
 
     function updateData() {
         var data = $("#formEdit").serialize();
